@@ -1,0 +1,41 @@
+@use "./partials/global" as *;
+
+
+// Header styling
+.navigation {
+    &__logo {
+        width: 120px;
+    height: 20px;
+    display: block;
+    margin: auto;
+    padding-top: 18px;
+    }
+
+    &__list-item {
+        display: inline;
+        list-style-type: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+// Hero styling
+.hero {
+    background-image: url("../assets/images/hero-bio.jpg");
+    height: 15.625rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+// Photo gallery styling
+.gallery__image {
+    width: 100%;
+    height: 200px;
+}

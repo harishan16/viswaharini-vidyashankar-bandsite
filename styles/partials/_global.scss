@@ -1,0 +1,9 @@
+@use "./variables" as *;
+
+.header {
+    background-color: $primary-black;
+}
+.footer {
+    background-color: $primary-black;
+    color: $white;
+}

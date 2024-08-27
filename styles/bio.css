@@ -1,0 +1,39 @@
+.header {
+  background-color: #323232;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+}
+
+.navigation__logo {
+  width: 120px;
+  height: 20px;
+  display: block;
+  margin: auto;
+  padding-top: 18px;
+}
+.navigation__list-item {
+  display: inline;
+  list-style-type: none;
+}
+.navigation__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.hero {
+  background-image: url("../assets/images/hero-bio.jpg");
+  height: 15.625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 200px;
+}/*# sourceMappingURL=bio.css.map */
