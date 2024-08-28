@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "AvenirNextLTPro-Regular";
+  font-family: "Avenir-Regular";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format(otf);
 }
 @font-face {
-  font-family: "AvenirNextLTPro-Demi";
+  font-family: "Avenir-Demi";
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
 }
 @font-face {
-  font-family: "AvenirNextLTPro-Bold";
+  font-family: "Avenir-Bold";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
 * {
@@ -22,7 +22,12 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.6em;
-  font-family: "AvenirNextLTPro-Regular";
+  font-family: "Avenir-Regular";
+}
+
+h1, h2, h3 {
+  font-family: "Avenir-Bold";
+  font-size: 2.5rem;
 }
 
 .header {
@@ -50,7 +55,7 @@ body {
   text-underline-offset: 2.3125rem;
   text-decoration-thickness: 0.1875rem;
   color: #fff;
-  font-family: "AvenirNextLTPro-Bold";
+  font-family: "Avenir-Bold";
   font-size: 1.5rem;
   font-weight: 700;
   margin: 2rem auto;
@@ -64,10 +69,26 @@ body {
 
 .hero {
   background-image: url("../assets/images/hero-bio.jpg");
-  height: 15.625rem;
+  height: 25.625rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+}
+.hero__overlay {
+  background-color: #323232;
+  height: inherit;
+  opacity: 50%;
+}
+.hero__title {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  color: #ffffff;
+}
+
+.band-info__image {
+  width: 100%;
 }
 
 .gallery__image {
