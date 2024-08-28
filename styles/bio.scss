@@ -1,28 +1,7 @@
 @use "./partials/global" as *;
 
 
-// Header styling
-.navigation {
-    &__logo {
-        width: 120px;
-    height: 20px;
-    display: block;
-    margin: auto;
-    padding-top: 18px;
-    }
 
-    &__list-item {
-        display: inline;
-        list-style-type: none;
-    }
-
-    &__link {
-        text-decoration: none;
-        color: #fff;
-        font-size: 24px;
-        font-weight: 700;
-    }
-}
 
 // Hero styling
 .hero {

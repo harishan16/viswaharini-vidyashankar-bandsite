@@ -1,28 +1,65 @@
+@font-face {
+  font-family: "AvenirNextLTPro-Regular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format(otf);
+}
+@font-face {
+  font-family: "AvenirNextLTPro-Demi";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro-Bold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  font-family: "AvenirNextLTPro-Regular";
+}
+
 .header {
   background-color: #323232;
+  height: auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navigation__logo {
+  width: 7.5rem;
+  height: 1.25rem;
+  margin: 1rem auto;
+  flex-basis: 100%;
+}
+.navigation__list-item {
+  list-style-type: none;
+}
+.navigation__link {
+  text-decoration: underline;
+  text-underline-offset: 2.3125rem;
+  text-decoration-thickness: 0.1875rem;
+  color: #fff;
+  font-family: "AvenirNextLTPro-Bold";
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2rem auto;
 }
 
 .footer {
   background-color: #323232;
   color: #ffffff;
-}
-
-.navigation__logo {
-  width: 120px;
-  height: 20px;
-  display: block;
-  margin: auto;
-  padding-top: 18px;
-}
-.navigation__list-item {
-  display: inline;
-  list-style-type: none;
-}
-.navigation__link {
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 700;
+  font-family: "AvenirNextLTPro-Bold";
 }
 
 .hero {
