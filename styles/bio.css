@@ -40,8 +40,6 @@ p {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2rem;
-  margin: 0;
-  padding: 1rem;
 }
 
 .header {
@@ -87,6 +85,27 @@ p {
   background-color: #323232;
   color: #ffffff;
   font-family: "Avenir-Bold";
+  padding: 1rem;
+}
+.footer__title {
+  padding-top: 2rem;
+}
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  padding: 1rem 0;
+}
+.footer__contact {
+  width: 50%;
+}
+.footer__contact-title {
+  font-weight: 700;
+}
+.footer__logo-link {
+  width: 20%;
+  display: block;
+  margin-top: 5rem;
 }
 
 /* Hero */
@@ -119,16 +138,18 @@ p {
   padding: 1rem 1rem 0 1rem;
 }
 .band-info__quotes {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir-Demi";
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.5rem;
   padding: 1rem 1rem 1.5rem 1rem;
+  margin: 0;
 }
 .band-info__sub-title {
   padding: 0 1rem 1rem 1rem;
 }
 .band-info__history {
-  padding: 0 1rem 3rem 1rem;
+  padding: 0 1rem 2rem 1rem;
 }
 
 /* Photo gallery */

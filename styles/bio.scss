@@ -1,5 +1,6 @@
 @use "./partials/global" as *;
 @use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
 /* Hero */
 .hero {
@@ -36,10 +37,9 @@
     }
 
     &__quotes {
-        font-family: "Avenir-Bold";
-        font-weight: 700;
-        line-height: 2.5rem;
+    @include text-style ("Avenir-Demi", 1.6rem, 700, 2.5rem);
         padding: 1rem 1rem 1.5rem 1rem;
+        margin: 0;
     }
 
     &__sub-title {
@@ -47,7 +47,7 @@
     }
 
     &__history {
-        padding: 0 1rem 3rem 1rem;
+        padding: 0 1rem 2rem 1rem;
     }
 }
 

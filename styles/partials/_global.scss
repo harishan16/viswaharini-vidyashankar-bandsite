@@ -18,17 +18,12 @@
   }
 
   h1, h2, h3 {
-    // use mixin here
-    font-family: "Avenir-Bold";
-    font-size: 2.5rem;
-    font-weight:700;
-    line-height: 2rem;
+    @include text-style ("Avenir-Bold", 2.5rem, 700, 2rem);
     margin: 0;
     padding:0;
   }
   p {
-    // use mixin here
-    @include paragraph-styling (400, 0, 1rem);
+    @include text-style ("Avenir-Regular", 1.5rem, 400, 2rem);
   }
 
 .header {
@@ -77,8 +72,34 @@
 /* Footer */
 
 .footer {
-    background-color: $primary-black;
-    color: $white;
+  background-color: $primary-black;
+  color: $white;
+  font-family: "Avenir-Bold";
+  padding:1rem;
 
-    font-family: "Avenir-Bold";
+  &__title {
+    padding-top:2rem;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding:1rem 0;
+  }
+
+  &__contact {
+    width:50%;
+  }
+
+  &__contact-title {
+    font-weight: 700;
+    
+  }
+
+  &__logo-link {
+    width: 20%;
+    display: block;
+    margin-top: 5rem;
+  }
 }
