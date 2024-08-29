@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./fonts" as *;
+@use "./mixins" as *;
 
 * {
     box-sizing: border-box;
@@ -13,52 +14,71 @@
     padding:0;
     font-size: 1.6em;
     font-family: "Avenir-Regular";
+    color: $primary-black;
   }
 
   h1, h2, h3 {
+    // use mixin here
     font-family: "Avenir-Bold";
     font-size: 2.5rem;
+    font-weight:700;
+    line-height: 2rem;
+    margin: 0;
+    padding:0;
+  }
+  p {
+    // use mixin here
+    @include paragraph-styling (400, 0, 1rem);
   }
 
 .header {
     background-color: $primary-black;
-    height: auto;
 }
 
-// Header styling
-.navigation {
+/* Header */
+.header {
+  &__logo-link {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    padding-top: 2rem;
+  }
 
-    &__logo {
-    width: 7.5rem;
-    height: 1.25rem;
-    margin: 1rem auto;
-    flex-basis:100%;
-    }
-
-    &__list-item {
-        list-style-type: none;
-    }
-
-    &__link {
-        text-decoration: underline;
-        text-underline-offset: 2.3125rem;
-        text-decoration-thickness: 0.1875rem;
-        color: #fff;
-        font-family: "Avenir-Bold";
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin: 2rem auto;
-
-    }
+  &__logo {
+        width: 7.5rem;
+        height: 1.25rem;
+        }
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    margin: 0;
+    padding:2rem;
+  }
+  &__list-item {
+            list-style-type: none;
+        }
+        &__link {
+                text-decoration: none;
+                  color: $silver;
+                  font-family: "Avenir-Bold";
+                  font-size: 1.5rem;
+                  font-weight: 700;
+          
+                  &--current {
+                    text-decoration: underline;
+                    text-underline-offset: 2.3125rem;
+                    text-decoration-thickness: 0.1875rem;
+                    color: $white;
+                    
+                  }
+              }
 }
+
+/* Footer */
 
 .footer {
     background-color: $primary-black;
     color: $white;
 
-    font-family: "AvenirNextLTPro-Bold";
+    font-family: "Avenir-Bold";
 }

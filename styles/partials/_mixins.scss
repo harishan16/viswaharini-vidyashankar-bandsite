@@ -1,0 +1,17 @@
+@mixin paragraph-styling ($weight, $margin, $padding) {
+    font-family: "Avenir-Regular";
+    font-size: 1.5rem;
+    font-weight: $weight;
+    line-height: 2rem;
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin heading-styling ($weight, $margin, $padding) {
+    font-family: "Avenir-Bold";
+    font-size: 1rem;
+    font-weight: $weight;
+    line-height: 1.3rem;
+    margin: $margin;
+    padding: $padding;
+}
