@@ -88,18 +88,17 @@
     padding:1rem 0;
   }
 
-  &__contact {
-    width:50%;
-  }
-
-  &__contact-title {
-    font-weight: 700;
-    
-  }
-
   &__logo-link {
     width: 20%;
     display: block;
     margin-top: 5rem;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-weight: 700;
   }
 }
