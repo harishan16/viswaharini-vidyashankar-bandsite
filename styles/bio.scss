@@ -4,13 +4,20 @@
 
 /* Hero */
 .hero {
-
     background-image: url("../assets/images/hero-bio.jpg");
     height: 25.625rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+
+    @include tablet {
+        height:40.625rem;
+    }
+
+    @include desktop {
+        height:50.625rem;
+    }
 
     &__overlay {
         background-color: $primary-black;
@@ -20,50 +27,94 @@
 
     &__title {
         position: absolute;
-        top: 35%;
-        left: 10%;
+        top: 45%;
+        left: 5%;
         color: $white;
+
+        @include tablet {
+            top: 50%;
+            left: 10%;
+        }
+
+        @include desktop {
+            top: 45%;
+            left: 15%;
+        }
     }
 }
 
 /* Band information */
 .band-info {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:1.5rem;
+
+    @include tablet {
+    width:80%;
+    justify-content: center;
+    }
+
     &__title {
-        padding: 1.5rem 0 0 1rem;
+        padding-top: 2rem;
     }
     &__image {
         width: 100%;
-        padding: 1rem 1rem 0 1rem;
+        padding-top: 1.5rem;
+
+        @include desktop {
+            width:80%;
+            margin: 0 auto;
+        }
     }
 
     &__quotes {
     @include text-style ("Avenir-Demi", 1.6rem, 700, 2.5rem);
-        padding: 1rem 1rem 1.5rem 1rem;
+        padding-top: 1rem;
         margin: 0;
     }
 
     &__sub-title {
-        padding: 0 1rem 1rem 1rem;
+    @include text-style ("Avenir-Demi", 1.6rem, 700, 2.5rem);
+        margin:0;
     }
 
     &__history {
-        padding: 0 1rem 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__text {
+        padding-top :1rem;
         margin:0;
     }
+
 }
 
 /* Photo gallery */
 .gallery {
+    padding:1.5rem;
+    background-color: $alabaster;
+
     @include tablet {
-        width: 90%;
+        // width: 90%;
+        margin:0 auto;
+    }
+
+    @include desktop {
+        width: 75%;
         margin:0 auto;
     }
 
     &__title {
-        padding:0 1rem 1rem 1rem;
+        padding-top: 1rem;
         
         @include tablet {
-        padding: 0 1rem 1rem 4rem;
+        padding: 0 1rem 1rem 5rem;
         }
     }
 
@@ -80,7 +131,7 @@
 
     &__image {
         height:40%;
-        padding:0 1rem 1rem 1rem;
+        padding-top:1.5rem;
 
         @include tablet {
             width:30%;
