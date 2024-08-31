@@ -157,9 +157,21 @@
   color: $white;
   font-family: "Avenir-Bold";
   padding:1.5rem;
+  display:flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: row;
+    padding:6rem;
+  }
 
   &__title {
     padding-top:2rem;
+
+    @include tablet {
+      // order:0;
+    }
   }
 
   &__social {
@@ -167,12 +179,33 @@
     justify-content: space-between;
     width: 30%;
     padding:1.5rem 0;
+
+    @include tablet {
+      margin-left:5rem;
+      width:20%;
+    }
+  }
+
+  &__logo {
+    width:12.5rem;
+    height:2.25rem;
   }
 
   &__logo-link {
     width: 20%;
     display: block;
     margin-top: 4rem;
+
+    @include tablet {
+      order:1;
+      margin:2rem 0 0 8rem;
+    }
+  }
+
+  &__copyright {
+    @include tablet {
+      order:3;
+    }
   }
 }
 
@@ -182,9 +215,19 @@
 
   @include tablet {
     flex-direction: row;
-    justify-content: center;
-    width: 20%;
+    justify-content: space-between;
+    order: 2;
+    margin-top:2rem;
+    flex:1;
   }
+
+  &__group {
+    @include tablet {
+      width:33%;
+    }
+  }
+
+  
   &__title {
     font-weight: 700;
   }
