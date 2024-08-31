@@ -18,12 +18,12 @@
   }
 
   h1 {
-    @include text-style ("Avenir-Bold", 2.5rem, 700, 2rem);
+    @include text-style ("Avenir-Bold", 2.5rem, 700, 2rem); 
     margin: 0;
     padding:0;
     
     @include tablet {
-      @include text-style ("Avenir-Bold", 4.75rem, 700, 4.25rem)
+      @include text-style ("Avenir-Bold", 5.75rem, 700, 4.25rem)
     }
     
     @include desktop {
@@ -37,7 +37,7 @@
     padding:0;
 
     @include tablet {
-      @include text-style ("Avenir-Bold", 3.25rem, 700, 3.75rem)
+      @include text-style ("Avenir-Bold", 4.25rem, 700, 3.75rem)
     }
 
     @include desktop {
@@ -49,7 +49,7 @@
     @include text-style ("Avenir-Regular", 1.5rem, 400, 2rem);
 
     @include tablet {
-      @include text-style ("Avenir-Regular", 1.875rem, 400, 2.25rem)
+      @include text-style ("Avenir-Regular", 2rem, 400, 3rem) 
     }
 
     @include desktop {
@@ -79,7 +79,7 @@
 
         @include tablet {
           flex:0;
-          padding: 0 4rem;
+          padding: 0 4rem 0 6rem;
           margin: 0;
         }
       }
@@ -128,7 +128,7 @@
                       }
                     }      
             }
-            
+
         &__link {
                 text-decoration: none;
                   color: $silver;
