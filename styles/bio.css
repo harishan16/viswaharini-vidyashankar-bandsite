@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Avenir-Regular";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url(viswaharini-vidyashankar-bandsite-sprint-1/assets/fonts/AvenirNextLTPro-Regular.otf);
 }
 @font-face {
   font-family: "Avenir-Demi";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+  src: url(viswaharini-vidyashankar-bandsite-sprint-1/assets/fonts/AvenirNextLTPro-Demi.otf);
 }
 @font-face {
   font-family: "Avenir-Bold";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  src: url(viswaharini-vidyashankar-bandsite-sprint-1/assets/fonts/AvenirNextLTPro-Bold.otf);
 }
 * {
   box-sizing: border-box;
@@ -22,7 +22,6 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.6em;
-  font-family: "Avenir-Regular";
   color: #323232;
 }
 
@@ -106,7 +105,7 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header {
     flex-direction: row;
     height: 10vh;
@@ -119,11 +118,16 @@ p {
   padding-top: 1.5rem;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header__logo-link {
     flex: 0;
     padding: 0 4rem 0 6rem;
     margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__logo-link {
+    padding: 0 4rem 0 14rem;
   }
 }
 .header__logo {
@@ -136,7 +140,7 @@ p {
   margin: 0;
   padding: 1rem 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header__list {
     flex: 0;
     padding: 0;
@@ -149,7 +153,7 @@ p {
   position: relative;
   border-bottom: 2px solid transparent;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header__list-item {
     padding: 0 4rem;
     position: static;
@@ -164,7 +168,7 @@ p {
   height: 4px;
   background-color: #fff;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header__list-item--current::after {
     top: auto;
     left: auto;
@@ -176,18 +180,34 @@ p {
   color: #afafaf;
   font-family: "Avenir-Regular";
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.875rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__link {
+    font-family: "Avenir-Regular";
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__link {
+    font-family: "Avenir-Regular";
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.875rem;
+  }
 }
 .header__link--current {
   color: #fff;
-  font-family: "Avenir-Bold";
+  font-family: "Avenir-Demi";
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header__link--current {
     text-decoration: underline;
     text-underline-offset: 4rem;
     text-decoration-thickness: 0.5rem;
-    color: #fff;
   }
 }
 
@@ -204,6 +224,7 @@ p {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer {
     flex-direction: row;
+    justify-content: space-between;
     padding: 6rem;
   }
 }
@@ -219,6 +240,7 @@ p {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer__social {
     margin-left: 5rem;
+    padding: 1rem;
     width: 20%;
   }
 }
@@ -281,7 +303,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 50.625rem;
+    height: 55.625rem;
   }
 }
 .hero__overlay {
@@ -292,7 +314,7 @@ p {
 .hero__title {
   position: absolute;
   top: 45%;
-  left: 5%;
+  left: 6%;
   color: #ffffff;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -304,7 +326,7 @@ p {
 @media screen and (min-width: 1280px) {
   .hero__title {
     top: 45%;
-    left: 15%;
+    left: 10%;
   }
 }
 
@@ -320,6 +342,11 @@ p {
     padding: 5rem 12rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .band-info {
+    padding: 5rem 20rem;
+  }
+}
 .band-info__title {
   padding-top: 2rem;
 }
@@ -328,11 +355,23 @@ p {
     margin-left: -6rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .band-info__title {
+    margin-left: -7rem;
+  }
+}
 .band-info__image {
   width: 100%;
   padding-top: 1.5rem;
+  height: 30vh;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .band-info__image {
+    padding-top: 4rem;
+    height: 55vh;
+  }
+}
+@media screen and (min-width: 1280px) {
   .band-info__image {
     padding-top: 4rem;
   }
@@ -352,6 +391,16 @@ p {
     font-weight: 700;
     line-height: 3.5rem;
     padding-top: 3.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .band-info__quotes {
+    font-family: "Avenir-Demi";
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+    padding-top: 3.5rem;
+    width: 82%;
   }
 }
 .band-info__quotes--author {
