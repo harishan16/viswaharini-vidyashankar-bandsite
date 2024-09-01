@@ -1,0 +1,234 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+@use "./mixins" as *;
+
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    margin: 0;
+    padding:0;
+    font-size: 1.6em;
+    font-family: "Avenir-Regular";
+    color: $primary-black;
+  }
+
+  h1 {
+    @include text-style ("Avenir-Bold", 2.5rem, 700, 2rem); 
+    margin: 0;
+    padding:0;
+    
+    @include tablet {
+      @include text-style ("Avenir-Bold", 5.75rem, 700, 4.25rem)
+    }
+    
+    @include desktop {
+      @include text-style ("Avenir-Bold", 4.75rem, 700, 4.25rem)
+    }
+  }
+
+  h2 {
+    @include text-style ("Avenir-Bold", 2.5rem, 700, 2rem);
+    margin: 0;
+    padding:0;
+
+    @include tablet {
+      @include text-style ("Avenir-Bold", 4.25rem, 700, 3.75rem)
+    }
+
+    @include desktop {
+      @include text-style ("Avenir-Bold", 3.25rem, 700, 3.75rem)
+    }
+  }
+
+  p {
+    @include text-style ("Avenir-Regular", 1.5rem, 400, 2rem);
+
+    @include tablet {
+      @include text-style ("Avenir-Regular", 2rem, 400, 3rem) 
+    }
+
+    @include desktop {
+      @include text-style ("Avenir-Regular", 1.875rem, 400, 2.25rem)
+    }
+  }
+
+/* Header */
+.header {
+  background-color: $primary-black;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+        @include tablet {
+          flex-direction: row;
+          height: 10vh;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+
+      &__logo-link {
+        flex:2;
+        padding-top: 1.5rem;
+        margin:0 auto;
+
+        @include tablet {
+          flex:0;
+          padding: 0 4rem 0 6rem;
+          margin: 0;
+        }
+      }
+
+      &__logo {
+            width: 12.5rem;
+            height: 2.25rem;
+            }
+
+      &__list {
+        display: flex;
+        flex:1;
+        margin: 0;
+        padding: 1rem 0;
+
+        @include tablet {
+          flex:0;
+          padding:0;
+        }
+      }
+      &__list-item {
+                    list-style-type: none;
+                    flex: 1;
+                    text-align: center;
+                    position: relative;
+                    border-bottom: 2px solid transparent;
+
+                    @include tablet {
+                      padding: 0 4rem;
+                      position: static;
+                    }
+
+                    &--current::after {
+                      content:'';
+                      position: absolute;
+                      top:2.7rem;
+                      left:0;
+                      width:100%;
+                      height: 4px;
+                      background-color: #fff;
+
+                      @include tablet {
+                        top:auto;
+                        left: auto;
+                        height:0;
+                      }
+                    }      
+            }
+
+        &__link {
+                text-decoration: none;
+                  color: $silver;
+                  font-family: "Avenir-Regular";
+                  font-size: 1.5rem;
+                  font-weight: 700;
+
+                  &--current {
+                    color: #fff;
+                  font-family: "Avenir-Bold";
+
+                  @include tablet {
+                    text-decoration: underline;
+                    text-underline-offset: 4rem;
+                    text-decoration-thickness: 0.5rem;
+                    color:#fff;
+                  }
+                  }
+        }            
+}
+
+/* Footer */
+
+.footer {
+  background-color: $primary-black;
+  color: $white;
+  font-family: "Avenir-Bold";
+  padding:1.5rem;
+  display:flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: row;
+    padding:6rem;
+  }
+
+  &__title {
+    padding-top:2rem;
+
+    @include tablet {
+      // order:0;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding:1.5rem 0;
+
+    @include tablet {
+      margin-left:5rem;
+      width:20%;
+    }
+  }
+
+  &__logo {
+    width:12.5rem;
+    height:2.25rem;
+  }
+
+  &__logo-link {
+    width: 20%;
+    display: block;
+    margin-top: 4rem;
+
+    @include tablet {
+      order:1;
+      margin:2rem 0 0 8rem;
+    }
+  }
+
+  &__copyright {
+    @include tablet {
+      order:3;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    order: 2;
+    margin-top:2rem;
+    flex:1;
+  }
+
+  &__group {
+    @include tablet {
+      width:33%;
+    }
+  }
+
+  
+  &__title {
+    font-weight: 700;
+  }
+}
