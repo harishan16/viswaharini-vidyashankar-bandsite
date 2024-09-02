@@ -13,7 +13,6 @@
     margin: 0;
     padding:0;
     font-size: 1.6em;
-    // font-family: 'Avenir-Regular';
     color: $primary-black;
   }
 
@@ -27,7 +26,7 @@
     }
     
     @include desktop {
-      @include text-style ('Avenir-Bold', 4.75rem, 700, 4.25rem);
+      @include text-style ('Avenir-Bold', 5.75rem, 700, 4.25rem); 
     }
   }
 
@@ -41,7 +40,7 @@
     }
 
     @include desktop {
-      @include text-style ('Avenir-Bold', 3.25rem, 700, 3.75rem);
+      @include text-style ('Avenir-Bold', 4.25rem, 700, 3.75rem);
     }
   }
 
@@ -53,7 +52,7 @@
     }
 
     @include desktop {
-      @include text-style ('Avenir-Regular', 1.875rem, 400, 2.25rem);
+      @include text-style ('Avenir-Regular', 1.8rem, 400, 2.5rem); 
     }
   }
 
@@ -66,18 +65,10 @@
 
         @include tablet-desktop {
           flex-direction: row;
-          height: 10vh;
+          height: 10rem;
           justify-content: flex-start;
           align-items: center;
         }
-
-        // @include desktop {
-        //   flex-direction:row;
-        //   height:10vh;
-        //   justify-content: flex-start;
-        //   align-items:center;
-        // }
-
 
       &__logo-link {
         flex:2;
@@ -91,9 +82,7 @@
         }
         
         @include desktop {
-          // flex:0;
           padding: 0 4rem 0 14rem;
-          // margin:0;
         }
       }
 
@@ -125,11 +114,6 @@
                       position: static;
                     }
 
-                    // @include desktop {
-                    //   padding: 0 4rem;
-                    //   position: static;
-                    // }
-
                     &--current::after {
                       content:'';
                       position: absolute;
@@ -144,12 +128,6 @@
                         left: auto;
                         height:0;
                       }
-
-                      // @include desktop {
-                      //   top:auto;
-                      //   left: auto;
-                      //   height:0;
-                      // }
                     }      
             }
 
@@ -175,39 +153,32 @@
                     text-underline-offset: 4rem;
                     text-decoration-thickness: 0.5rem;
                   }
-
-                  // @include desktop {
-                  //   text-decoration: underline;
-                  //   text-underline-offset: 4rem;
-                  //   text-decoration-thickness: 0.5rem;
-                  // }
                   }
         }            
 }
 
 /* Footer */
-
 .footer {
   background-color: $primary-black;
   color: $white;
   font-family: 'Avenir-Bold';
-  padding:1.5rem;
-  display:flex;
+  padding: 1.5rem;
+  display: flex;
   flex-direction:column;
   flex-wrap: wrap;
 
-  @include tablet {
+  @include tablet-desktop {
     flex-direction: row;
     justify-content: space-between;
     padding:6rem;
   }
 
+  @include desktop {
+    justify-content: flex-start;
+  }
+
   &__title {
     padding-top:2rem;
-
-    @include tablet {
-      // order:0;
-    }
   }
 
   &__social {
@@ -216,7 +187,7 @@
     width: 30%;
     padding:1.5rem 0;
 
-    @include tablet {
+    @include tablet-desktop {
       margin-left:5rem;
       padding:1rem;
       width:20%;
@@ -233,14 +204,14 @@
     display: block;
     margin-top: 4rem;
 
-    @include tablet {
+    @include tablet-desktop {
       order:1;
       margin:2rem 0 0 8rem;
     }
   }
 
   &__copyright {
-    @include tablet {
+    @include tablet-desktop {
       order:3;
     }
   }
@@ -254,17 +225,28 @@
     flex-direction: row;
     justify-content: space-between;
     order: 2;
-    margin-top:2rem;
+    margin:2rem 0;
     flex:1;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+    order: 2;
+    margin-top:2rem;
+    flex:1 1 100%;
   }
 
   &__group {
     @include tablet {
       width:33%;
     }
+
+    @include desktop {
+      width:25%;
+    }
   }
 
-  
   &__title {
     font-weight: 700;
   }
