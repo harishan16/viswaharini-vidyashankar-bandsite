@@ -266,4 +266,19 @@
     &__title {
       font-weight: 700;
     }
+
+    &__email {
+      text-decoration: none;
+      @include text-style ('Avenir-Regular', 1.5rem, 400, 1.875rem);
+      color:#fff;
+
+      @include tablet {
+        @include text-style ('Avenir-Regular', 2rem, 400, 3rem);
+      }
+
+      @include desktop {
+        @include text-style ('Avenir-Regular', 1.8rem, 400, 2.5rem);
+      }
+
+    }
   }
