@@ -245,6 +245,7 @@ p {
 @media screen and (min-width: 768px) {
   .footer__social {
     margin-left: -20rem;
+    margin-bottom: -0.5rem;
     padding: 1rem;
     width: 20%;
   }
