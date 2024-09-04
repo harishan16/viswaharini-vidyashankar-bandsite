@@ -391,12 +391,19 @@ p {
 .hero__sub-title {
   position: absolute;
   top: 15%;
-  left: 5%;
+  left: 1.5rem;
 }
 .hero__title {
   position: absolute;
   top: 25%;
-  left: 5%;
+  left: 1.5rem;
+}
+.hero__embedSong {
+  height: 18rem;
+  padding: 1.5rem;
+  position: absolute;
+  top: 40%;
+  border-radius: 2rem;
 }
 
 .shows {
