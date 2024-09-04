@@ -375,206 +375,30 @@ p {
 
 /* Hero */
 .hero {
-  background-image: url("../assets/images/hero-bio.jpg");
+  background-image: url("../assets/images/hero-shows.jpg");
   height: 28.625rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  color: #fff;
   position: relative;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .hero {
-    height: 45.625rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero {
-    height: 62.625rem;
-  }
 }
 .hero__overlay {
   background-color: #323232;
   height: inherit;
   opacity: 50%;
 }
+.hero__sub-title {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
 .hero__title {
   position: absolute;
-  top: 45%;
-  left: 6%;
-  color: #ffffff;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .hero__title {
-    top: 45%;
-    left: 5%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__title {
-    top: 45%;
-    left: 10%;
-  }
+  top: 25%;
+  left: 5%;
 }
 
-/* Band information */
-.band-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.shows {
   padding: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .band-info {
-    padding: 5rem 12rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .band-info {
-    padding: 5rem 24rem;
-  }
-}
-.band-info__title {
-  padding-top: 2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .band-info__title {
-    margin-left: -6rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .band-info__title {
-    margin-left: -9rem;
-  }
-}
-.band-info__image {
-  width: 100%;
-  padding-top: 1.5rem;
-  height: 30rem;
-}
-@media screen and (min-width: 768px) {
-  .band-info__image {
-    padding-top: 4rem;
-    height: 50rem;
-  }
-}
-.band-info__quotes {
-  font-family: "Avenir-Demi";
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 2.5rem;
-  padding-top: 1rem;
-  margin: 0;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .band-info__quotes {
-    font-family: "Avenir-Demi";
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 3.5rem;
-    padding-top: 3.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .band-info__quotes {
-    font-family: "Avenir-Demi";
-    font-size: 2.3rem;
-    font-weight: 700;
-    line-height: 3rem;
-    padding-top: 3.5rem;
-    width: 81%;
-  }
-}
-.band-info__quotes--author {
-  font-weight: 700;
-}
-.band-info__sub-title {
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .band-info__sub-title {
-    padding-top: 2rem;
-  }
-}
-.band-info__history {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .band-info__history {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-.band-info__text {
-  padding-top: 1rem;
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .band-info__text {
-    font-family: "Avenir-Regular";
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 3rem;
-    padding-top: 2.5rem;
-    width: 47%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .band-info__text {
-    font-family: "Avenir-Regular";
-    font-size: 1.575rem;
-    font-weight: 400;
-    line-height: 2.8rem;
-  }
-}
-
-/* Photo gallery */
-.gallery {
-  padding: 1.5rem;
-  background-color: #fafafa;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .gallery {
-    padding: 3.125rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .gallery {
-    padding: 8rem 12rem 0rem 12rem;
-  }
-}
-.gallery__title {
-  padding-top: 1rem;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .gallery__title {
-    padding: 6rem 0rem 2rem 1.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .gallery__title {
-    padding: 0rem 0rem 2rem 1.5rem;
-  }
-}
-.gallery__container {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .gallery__container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 3rem;
-  }
-}
-.gallery__image {
-  height: 40%;
-  padding-top: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  .gallery__image {
-    width: 33.3%;
-    padding: 1.5rem;
-  }
-}/*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=shows.css.map */

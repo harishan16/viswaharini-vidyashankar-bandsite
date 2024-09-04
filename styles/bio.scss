@@ -104,11 +104,9 @@
     }
 
     &__sub-title {
-    @include text-style ('Avenir-Demi', 1.6rem, 700, 2.5rem);
         margin:0;
 
         @include tablet-desktop {
-            @include text-style ('Avenir-Demi', 2.6rem, 700, 3.5rem);
             padding-top:2rem;
         }
     }

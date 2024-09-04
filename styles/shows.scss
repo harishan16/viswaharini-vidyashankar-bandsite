@@ -1,0 +1,39 @@
+@use "./partials/fonts" as *;
+@use "./partials/global" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
+/* Hero */
+.hero {
+    background-image: url("../assets/images/hero-shows.jpg");
+    height: 28.625rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:#fff;
+    position: relative;
+
+    &__overlay {
+        background-color: $primary-black;
+        height: inherit;
+        opacity: 50%;
+    }
+
+    &__sub-title {
+        position: absolute;
+        // padding:3rem 0 3rem 1.5rem;
+        top:15%;
+        left:5%;
+    }
+
+    &__title {
+        position:absolute;
+        // padding: 0 0 3rem 1.5rem;
+        top:25%;
+        left:5%;
+    }
+}
+
+.shows {
+    padding:1.5rem;
+}
