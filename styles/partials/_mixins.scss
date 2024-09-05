@@ -6,6 +6,12 @@
     line-height: $line-height;
 }
 
+@mixin mobile {
+  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    @content;
+  }
+}
+
 @mixin tablet {
     @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
       @content;

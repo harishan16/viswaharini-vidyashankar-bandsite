@@ -43,5 +43,46 @@
 }
 
 .shows {
-    padding:1.5rem;
+    &__title {
+        padding: 4rem 0 2rem 1.5rem;
+    }
+
+    &__list {
+    padding: 0 1.5rem;
+    }
+
+    &__list-label {
+        color:$silver;
+        @include text-style ('Avenir-Demi', 1.2rem, 700, 2.5rem);
+        margin-bottom:0;
+    }
+
+    &__list-info {
+        margin:0px 0 1.25rem 0;
+
+        &--highlight {
+        @include text-style ('Avenir-Demi', 1.6rem, 700, 2.5rem);
+        }
+    }
+
+    &__buyTickets {
+        width:100%;
+        height: 4rem;
+        background-color: $primary-black;
+        border:none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: .375rem;
+        cursor: pointer;
+        @include text-style ('Avenir-Demi', 1.6rem, 700, 2.5rem);
+    }
+
+    &__divider {
+        border: 0;
+        height: 2px;
+        background: $mercury;
+        margin: 20px 0; 
+        align-self: center;
+    }
 }

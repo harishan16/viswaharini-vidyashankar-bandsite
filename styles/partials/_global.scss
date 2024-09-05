@@ -60,6 +60,8 @@
 
     p {
       @include text-style ('Avenir-Regular', 1.5rem, 400, 2rem);
+      // margin:0;
+      // padding:0;
 
       @include tablet {
         @include text-style ('Avenir-Regular', 2rem, 400, 3rem);

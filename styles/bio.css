@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Avenir-Regular";
-  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf), url(../assets/fonts/AvenirNextLTPro.ttf);
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"), url(../assets/fonts/AvenirNextLTPro.ttf) format("turetype");
 }
 @font-face {
   font-family: "Avenir-Demi";
-  src: url(../assets/fonts/AvenirNextLTProDemi.otf), url(../assets/fonts/AvenirNextLTProDemi.ttf);
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype"), url(../assets/fonts/AvenirNextLTPro-Demi.ttf) format("truetype");
 }
 @font-face {
   font-family: "Avenir-Bold";
-  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf), url(../assets/fonts/AvenirNextLTProBold.ttf);
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype"), url(../assets/fonts/AvenirNextLTProBold.ttf) format("truetype");
 }
 * {
   box-sizing: border-box;
@@ -530,8 +530,12 @@ p {
 
 /* Photo gallery */
 .gallery {
-  padding: 1.5rem;
   background-color: #fafafa;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .gallery {
+    padding: 1.5rem;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .gallery {
@@ -543,8 +547,10 @@ p {
     padding: 8rem 12rem 0rem 12rem;
   }
 }
-.gallery__title {
-  padding-top: 1rem;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .gallery__title {
+    padding-top: 1rem;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .gallery__title {
@@ -558,7 +564,11 @@ p {
 }
 .gallery__container {
   display: flex;
-  flex-direction: column;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .gallery__container {
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 768px) {
   .gallery__container {
@@ -570,7 +580,11 @@ p {
 }
 .gallery__image {
   height: 40%;
-  padding-top: 1.5rem;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .gallery__image {
+    padding-top: 1.5rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .gallery__image {
