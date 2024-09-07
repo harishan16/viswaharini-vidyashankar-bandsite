@@ -1,19 +1,13 @@
 @use "./variables" as *;
-@mixin text-style ($family, $size, $weight, $line-height) {
-    font-family: $family;
+@mixin text-style ($size, $weight, $line-height) {
+    font-family: 'AvenirNextLTPro';
     font-size: $size;
     font-weight: $weight;
     line-height: $line-height;
 }
 
-@mixin mobile {
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
-    @content;
-  }
-}
-
 @mixin tablet {
-    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @media screen and (min-width: $tablet-min) {
       @content;
     }
 }
@@ -24,8 +18,3 @@
     }
 }
 
-@mixin tablet-desktop {
-  @media screen and (min-width:$tablet-min) {
-    @content;
-  }
-}

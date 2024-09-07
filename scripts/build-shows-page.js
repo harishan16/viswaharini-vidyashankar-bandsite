@@ -30,13 +30,34 @@ let showsList = [
         location: 'San Francisco, CA'
     }
 ]
+
 let showsEl = document.querySelector('.shows');
-// console.log(articleEl);
+
+let labelRow = document.createElement('div');
+labelRow.classList.add('shows__labelRow');
+labelRow.classList.add('shows__list');
+
+showsEl.appendChild(labelRow);
+
+let labelDate = document.createElement('span');
+labelDate.innerText = 'DATE';
+labelDate.classList.add('shows__labelRw');
+labelRow.appendChild(labelDate);
+
+let labelVenue = document.createElement('span');
+labelVenue.innerText = 'VENUE';
+labelVenue.classList.add('shows__labelRw');
+labelRow.appendChild(labelVenue);
+
+let labelLocation = document.createElement('span');
+labelLocation.innerText = 'LOCATION';
+labelLocation.classList.add('shows__labelRw');
+labelRow.appendChild(labelLocation);
+
 
 function labelFunc (label) {
-    // console.log(label);
     let labelName = document.createElement('p');
-    labelName.innerHTML = label;
+    labelName.innerText = label;
     labelName.classList.add('shows__list-label');
     return labelName;
 } 
@@ -46,27 +67,23 @@ for (let i = 0; i < showsList.length; i++) {
     let articleEl = document.createElement('article');
     articleEl.classList.add('shows__list');
 
-
     let show = showsList[i];   
-   let labelName = labelFunc('DATE');
-    console.log(labelName);
-
+    let labelName = labelFunc('DATE');
     articleEl.appendChild(labelName);
 
 
     let date = document.createElement('p');
-    date.innerHTML = show.date;
+    date.innerText = show.date;
     date.classList.add('shows__list-info');
     date.classList.add('shows__list-info--highlight');
     articleEl.appendChild(date);
 
-   let venueName = labelFunc('VENUE');
+    let venueName = labelFunc('VENUE');
 
-   articleEl.appendChild(venueName);
-
+    articleEl.appendChild(venueName);
 
     let venue = document.createElement('p');
-    venue.innerHTML = show.venue;
+    venue.innerText = show.venue;
     venue.classList.add('shows__list-info');
     articleEl.appendChild(venue);
 
@@ -74,14 +91,13 @@ for (let i = 0; i < showsList.length; i++) {
 
     articleEl.appendChild(locationName);
 
-
     let location = document.createElement('p');
-    location.innerHTML = show.location;
+    location.innerText = show.location;
     location.classList.add('shows__list-info');
     articleEl.appendChild(location);
 
     let buyTickets = document.createElement('button');
-    buyTickets.innerHTML = 'BUY TICKETS';
+    buyTickets.innerText = 'BUY TICKETS';
     buyTickets.classList.add('shows__buyTickets');
     articleEl.appendChild(buyTickets);
 
@@ -92,3 +108,6 @@ for (let i = 0; i < showsList.length; i++) {
     showsEl.appendChild(divider);
 
 }
+
+
+

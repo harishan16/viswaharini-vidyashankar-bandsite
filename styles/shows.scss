@@ -21,53 +21,80 @@
 
     &__sub-title {
         position: absolute;
-        // padding:3rem 0 3rem 1.5rem;
         top:15%;
         left:1.5rem;
     }
 
     &__title {
         position:absolute;
-        // padding: 0 0 3rem 1.5rem;
         top:25%;
         left:1.5rem;
     }
 
     &__embedSong {
         height: 18rem;
-    padding: 1.5rem;
-    position: absolute;
-    top: 40%;
-    border-radius:2rem;
+        padding: 1.5rem;
+        position: absolute;
+        top: 40%;
+        border-radius:2rem;
     }
 }
 
 .shows {
+    padding:0;
+
+    @include desktop {
+        padding: 3rem 12rem 3rem 42rem;
+        position: relative;
+    }
     &__title {
         padding: 4rem 0 2rem 1.5rem;
+
+        @include desktop {
+            position: absolute;
+            left:7.5rem;
+            top:1.4rem;
+        }
     }
 
     &__list {
-    padding: 0 1.5rem;
+        padding: 0 1.5rem;
+        display:flex;
+        flex-direction:column;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: self-end;
+    }
     }
 
     &__list-label {
         color:$silver;
-        @include text-style ('Avenir-Demi', 1.2rem, 700, 2.5rem);
+       
+        @include text-style ( 1.2rem, 700, 2.5rem);
         margin-bottom:0;
+
+        @include tablet {
+            display:none;
+        }
     }
 
     &__list-info {
         margin:0px 0 1.25rem 0;
 
+        @include tablet {
+            width:25%
+        }
+
         &--highlight {
-        @include text-style ('Avenir-Demi', 1.6rem, 700, 2.5rem);
+            @include text-style (1.6rem, 700, 2.5rem);
         }
     }
 
     &__buyTickets {
         width:100%;
-        height: 4rem;
+        height: 5rem;
         background-color: $primary-black;
         border:none;
         color: white;
@@ -75,14 +102,37 @@
         text-decoration: none;
         border-radius: .375rem;
         cursor: pointer;
-        @include text-style ('Avenir-Demi', 1.6rem, 700, 2.5rem);
+        
+        @include text-style ( 1.6rem, 700, 2.5rem);
+
+        @include tablet {
+            width:30%;
+        }
+
+        @include desktop {
+            width:20%;
+        }
     }
 
-    &__divider {
-        border: 0;
-        height: 2px;
-        background: $mercury;
-        margin: 20px 0; 
-        align-self: center;
+    &__labelRow {
+        display: none;
+
+        @include tablet {
+            color:$silver;
+        
+        @include text-style ( 2rem, 600, 2.5rem);
+            width: 75%;
+            display: flex;
+            justify-content: start;
+            margin:4rem 0;
+        }
+
+        @include desktop{
+            width: 84%;
+        }
+    }
+    
+    &__labelRw {
+        width:32%;
     }
 }

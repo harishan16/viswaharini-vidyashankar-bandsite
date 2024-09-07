@@ -1,14 +1,17 @@
 @font-face {
-  font-family: "Avenir-Regular";
-  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"), url(../assets/fonts/AvenirNextLTPro.ttf) format("turetype");
+  font-family: "AvenirNextLTPro";
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"), url(../assets/fonts/AvenirNextLTPro.ttf) format("truetype");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "Avenir-Demi";
+  font-family: "AvenirNextLTPro";
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype"), url(../assets/fonts/AvenirNextLTPro-Demi.ttf) format("truetype");
+  font-weight: 600;
 }
 @font-face {
-  font-family: "Avenir-Bold";
+  font-family: "AvenirNextLTPro";
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype"), url(../assets/fonts/AvenirNextLTProBold.ttf) format("truetype");
+  font-weight: 700;
 }
 * {
   box-sizing: border-box;
@@ -23,19 +26,20 @@ body {
   padding: 0;
   font-size: 1.6em;
   color: #323232;
+  font-family: "AvenirNextLTPro", Arial, sans-serif;
 }
 
 h1 {
-  font-family: "Avenir-Bold";
+  font-family: "AvenirNextLTPro";
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 2rem;
   margin: 0;
   padding: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   h1 {
-    font-family: "Avenir-Bold";
+    font-family: "AvenirNextLTPro";
     font-size: 5.75rem;
     font-weight: 700;
     line-height: 4.25rem;
@@ -43,7 +47,7 @@ h1 {
 }
 @media screen and (min-width: 1280px) {
   h1 {
-    font-family: "Avenir-Bold";
+    font-family: "AvenirNextLTPro";
     font-size: 5.75rem;
     font-weight: 700;
     line-height: 4.25rem;
@@ -51,16 +55,16 @@ h1 {
 }
 
 h2 {
-  font-family: "Avenir-Bold";
+  font-family: "AvenirNextLTPro";
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 2rem;
   margin: 0;
   padding: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   h2 {
-    font-family: "Avenir-Bold";
+    font-family: "AvenirNextLTPro";
     font-size: 4.25rem;
     font-weight: 700;
     line-height: 3.75rem;
@@ -68,7 +72,7 @@ h2 {
 }
 @media screen and (min-width: 1280px) {
   h2 {
-    font-family: "Avenir-Bold";
+    font-family: "AvenirNextLTPro";
     font-size: 4.25rem;
     font-weight: 700;
     line-height: 3.75rem;
@@ -76,16 +80,16 @@ h2 {
 }
 
 h4 {
-  font-family: "Avenir-Demi";
+  font-family: "AvenirNextLTPro";
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.5rem;
   margin: 0;
   padding: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   h4 {
-    font-family: "Avenir-Demi";
+    font-family: "AvenirNextLTPro";
     font-size: 2.6rem;
     font-weight: 700;
     line-height: 3.5rem;
@@ -93,7 +97,7 @@ h4 {
 }
 @media screen and (min-width: 1280px) {
   h4 {
-    font-family: "Avenir-Bold";
+    font-family: "AvenirNextLTPro";
     font-size: 2.6rem;
     font-weight: 700;
     line-height: 3.5rem;
@@ -101,14 +105,14 @@ h4 {
 }
 
 p {
-  font-family: "Avenir-Regular";
+  font-family: "AvenirNextLTPro";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   p {
-    font-family: "Avenir-Regular";
+    font-family: "AvenirNextLTPro";
     font-size: 2rem;
     font-weight: 400;
     line-height: 3rem;
@@ -116,7 +120,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   p {
-    font-family: "Avenir-Regular";
+    font-family: "AvenirNextLTPro";
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 2.5rem;
@@ -203,14 +207,14 @@ p {
 .header__link {
   text-decoration: none;
   color: #afafaf;
-  font-family: "Avenir-Regular";
+  font-family: "AvenirNextLTPro";
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.875rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header__link {
-    font-family: "Avenir-Regular";
+    font-family: "AvenirNextLTPro";
     font-size: 2rem;
     font-weight: 600;
     line-height: 2.3rem;
@@ -218,7 +222,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .header__link {
-    font-family: "Avenir-Regular";
+    font-family: "AvenirNextLTPro";
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.875rem;
@@ -226,7 +230,6 @@ p {
 }
 .header__link--current {
   color: #fff;
-  font-family: "Avenir-Demi";
 }
 @media screen and (min-width: 768px) {
   .header__link--current {
@@ -240,7 +243,6 @@ p {
 .footer {
   background-color: #323232;
   color: #ffffff;
-  font-family: "Avenir-Bold";
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -266,13 +268,14 @@ p {
   justify-content: space-between;
   width: 23%;
   padding: 1.5rem 0;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .footer__social {
-    margin-left: -20rem;
+    margin-left: -10rem;
     margin-bottom: -0.5rem;
     padding: 1rem;
-    width: 20%;
+    width: 180px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -317,7 +320,7 @@ p {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .contact {
     flex-direction: row;
     justify-content: space-between;
@@ -335,7 +338,7 @@ p {
     flex: 1 1 100%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .contact__group {
     width: 33%;
   }
@@ -350,15 +353,15 @@ p {
 }
 .contact__email {
   text-decoration: none;
-  font-family: "Avenir-Regular";
+  font-family: "AvenirNextLTPro";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.875rem;
   color: #fff;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .contact__email {
-    font-family: "Avenir-Regular";
+    font-family: "AvenirNextLTPro";
     font-size: 2rem;
     font-weight: 400;
     line-height: 3rem;
@@ -366,11 +369,18 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .contact__email {
-    font-family: "Avenir-Regular";
+    font-family: "AvenirNextLTPro";
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 2.5rem;
   }
+}
+
+.shows__divider, .comments__divider {
+  border: 0;
+  height: 2px;
+  background: #e1e1e1;
+  margin: 1.5rem 0;
 }
 
 /* Hero */
@@ -406,32 +416,67 @@ p {
   border-radius: 2rem;
 }
 
+.shows {
+  padding: 0;
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    padding: 3rem 12rem 3rem 42rem;
+    position: relative;
+  }
+}
 .shows__title {
   padding: 4rem 0 2rem 1.5rem;
 }
+@media screen and (min-width: 1280px) {
+  .shows__title {
+    position: absolute;
+    left: 7.5rem;
+    top: 1.4rem;
+  }
+}
 .shows__list {
   padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .shows__list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: self-end;
+  }
 }
 .shows__list-label {
   color: #afafaf;
-  font-family: "Avenir-Demi";
+  font-family: "AvenirNextLTPro";
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 2.5rem;
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .shows__list-label {
+    display: none;
+  }
+}
 .shows__list-info {
   margin: 0px 0 1.25rem 0;
 }
+@media screen and (min-width: 768px) {
+  .shows__list-info {
+    width: 25%;
+  }
+}
 .shows__list-info--highlight {
-  font-family: "Avenir-Demi";
+  font-family: "AvenirNextLTPro";
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.5rem;
 }
 .shows__buyTickets {
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   background-color: #323232;
   border: none;
   color: white;
@@ -439,15 +484,42 @@ p {
   text-decoration: none;
   border-radius: 0.375rem;
   cursor: pointer;
-  font-family: "Avenir-Demi";
+  font-family: "AvenirNextLTPro";
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.5rem;
 }
-.shows__divider {
-  border: 0;
-  height: 2px;
-  background: #e1e1e1;
-  margin: 20px 0;
-  align-self: center;
+@media screen and (min-width: 768px) {
+  .shows__buyTickets {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__buyTickets {
+    width: 20%;
+  }
+}
+.shows__labelRow {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows__labelRow {
+    color: #afafaf;
+    font-family: "AvenirNextLTPro";
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    width: 75%;
+    display: flex;
+    justify-content: start;
+    margin: 4rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__labelRow {
+    width: 84%;
+  }
+}
+.shows__labelRw {
+  width: 32%;
 }/*# sourceMappingURL=shows.css.map */

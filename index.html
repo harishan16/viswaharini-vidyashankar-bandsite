@@ -4,15 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./styles/bio.css" rel="stylesheet"/>
+        <script src="./scripts/index-page.js" defer></script>
         <title>Band Site</title>
     </head>
     <body>
         <header class="header">
             <a href="./index.html" class="header__logo-link"><img class="header__logo" src="./assets/logos/Logo-bandsite.svg" alt="wordmark logo stating bandsite" /></a>
+            <nav class="header__navigation"> 
             <ul class="header__list">
                 <li class="header__list-item header__list-item--current"><a href="./index.html" class="header__link header__link--current">Biography</a></li>
                 <li class="header__list-item"><a href="./pages/shows.html" class="header__link">Shows</a></li>
             </ul>
+        </nav>
         </header>
         <main>
             <section class="hero">
@@ -47,8 +50,21 @@
                 </div>
             </section>
             <section class="comments">
-                <h2>Join the conversation</h2>
+                <h2 class="comments__title">Join the Conversation</h2>
+                <form class="comments__form">
+                    <div class="comments__user-image"></div>
+                    <!-- <img class="comments__user-image" src="./assets/images/Mohan-muruge.jpg" alt="User profile image"> -->
+                    <div class="comments__form-input">
+                    <label for="name" class="comments__form-label">NAME</label>
+                    <input type="text" name="name" id="name" class="comments__form-name" placeholder="Enter your name">
+                    <label for="comment" class="comments__form-label">COMMENT</label>
+                    <textarea name="comment" id="comment" class="comments__form-comment" placeholder="Add a new comment"></textarea>
+                    <button name="submit" class="comments__form-button">COMMENT</button>
+                </div>
+                </form><hr class="comments__divider">
+                <section class="comments__display">
 
+                </section>
             </section>
         </main>
         <footer class="footer">
