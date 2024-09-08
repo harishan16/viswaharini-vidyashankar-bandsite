@@ -124,17 +124,10 @@
     &__text {
         padding-top :1rem;
         margin:0;
-        // font-weight:600;
 
         @include tablet {
-            // @include text-style (2rem, 400, 3rem);
-            // font-weight:600;
             padding-top:2.5rem;
             width:47%;
-        } 
-
-        @include desktop {
-            // @include text-style (1.575rem, 400, 2.8rem);
         } 
     }
 
@@ -211,7 +204,6 @@
     }
 
     &__user-image {
-        // display: inline-block;
         width:5.25rem;
         height:5.25rem;
         margin-top:2.7rem;
@@ -275,7 +267,6 @@
         border-radius: .375rem;
         cursor: pointer;
         @include text-style ( 1.6rem, 600, 2.5rem);
-        // font-weight:600;
 
         @include tablet {
             width: 35%;
@@ -311,7 +302,6 @@
     }
 
     &__imageHolder, &__userImage{
-        // display: inline-block;
         width:5.25rem;
         height:5.25rem;
         border-radius: 50%;

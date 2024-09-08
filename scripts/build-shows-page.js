@@ -33,7 +33,7 @@ let showsList = [
 
 let showsEl = document.querySelector('.shows');
 
-// Create showa header row for tablet and desktop view
+// Create shows header row for tablet and desktop view
 let labelRow = document.createElement('div');
 labelRow.classList.add('shows__labelRow');
 
@@ -80,7 +80,6 @@ for (let i = 0; i < showsList.length; i++) {
     articleEl.appendChild(date);
 
     let venueName = labelFunc('VENUE');
-
     articleEl.appendChild(venueName);
 
     let venue = document.createElement('p');
@@ -89,7 +88,6 @@ for (let i = 0; i < showsList.length; i++) {
     articleEl.appendChild(venue);
 
     let locationName = labelFunc('LOCATION');
-
     articleEl.appendChild(locationName);
 
     let location = document.createElement('p');

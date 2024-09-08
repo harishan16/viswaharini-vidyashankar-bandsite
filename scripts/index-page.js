@@ -9,7 +9,6 @@ let commentsList = [
         name: 'Christina Cabrera',
         timeStamp: '10/28/2023',
         comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-        // image: "../assets/images/Mohan-muruge.jpg",
     },
     {
         name: 'Isaac Tadesse',
@@ -22,46 +21,27 @@ function arraySort (){
 commentsList.sort((a, b) => {
     const dateA = new Date(a.timeStamp);
     const dateB = new Date(b.timeStamp);
-    // console.log(dateA);
 
     return dateB - dateA;
 }); 
 }
 
 
-// console.log(commentsList);
-// };
-// questions to be answered ?
-// timestamp is number or string?
-// try forEach instaed of for loop 
-// for reversing use sorting (to sort according to timestamp) because you use timestamp, try .reverse() or .toReversed() or unshift || check if original array is modified
-// wrap functions in if conditions to avoid brokenn esp for profile image
-// to clear inner content or old array , innerHTML = ""
-// wrap for loop in a function
-// form.reset();
-
-// get the form element
 let commentsForm = document.querySelector('.comments__form');
 console.log(commentsForm);
 
-// container element
 let displayElement = document.querySelector(".comments__display");
 console.log(displayElement);
 
-// make this a func so that it can be called
 function displayNew () {
     displayElement.innerText = "";
 
-// iterate over the array
 commentsList.forEach((item) => {
-    
-displayComment(item);
+    displayComment(item);
 });
 }
 
-
 function displayComment(item) {
-console.log(item);
 
 let article = document.createElement("article");
 article.classList.add("comments__item");
@@ -75,7 +55,6 @@ if (item.image !== undefined) {
 } else {
     const imageHolder = document.createElement('div');
     imageHolder.classList.add("comments__imageHolder");
-
     article.appendChild(imageHolder);
 }
 
@@ -83,60 +62,55 @@ const infoText = document.createElement("div");
 infoText.classList.add("comments__info-text");
 article.appendChild(infoText);
 
-    const userName = document.createElement('p');
-    userName.classList.add("comments__user-name");
-    userName.textContent = item.name;
-    infoText.appendChild(userName);
+const userName = document.createElement('p');
+userName.classList.add("comments__user-name");
+userName.textContent = item.name;
+infoText.appendChild(userName);
 
-    const timeStamp = document.createElement('span');
-    timeStamp.classList.add("comments__time-stamp");
-    timeStamp.textContent = item.timeStamp;
-    infoText.appendChild(timeStamp);
+const timeStamp = document.createElement('span');
+timeStamp.classList.add("comments__time-stamp");
+timeStamp.textContent = item.timeStamp;
+infoText.appendChild(timeStamp);
 
-    const userComment = document.createElement('p');
-    userComment.classList.add("comments__user-comment");
-    userComment.textContent = item.comment;
-    infoText.appendChild(userComment);
+const userComment = document.createElement('p');
+userComment.classList.add("comments__user-comment");
+userComment.textContent = item.comment;
+infoText.appendChild(userComment);
 
-    let divider = document.createElement('hr');
-    divider.classList.add('comments__divider');
-    displayElement.appendChild(divider);
+let divider = document.createElement('hr');
+divider.classList.add('comments__divider');
+displayElement.appendChild(divider);
 }
 
-// add event listener
 commentsForm.addEventListener('submit', (event) => {
    
-    // prevent default
-    event.preventDefault();
+event.preventDefault();
 
-    const form = event.target;
-    const name = form.name.value;
-    const comment = form.comment.value;
+const form = event.target;
+const name = form.name.value;
+const comment = form.comment.value;
 
 // creating the new comment as object
     const newComment = {
         name: name,
-        // timeStamp: `${month}/${day}/${year}`,
         timeStamp: new Date(),
         comment: comment,
     }
 
-    // pushing new comment into the comments array
-    commentsList.push(newComment);
-    // console.log(commentsList);
+commentsList.push(newComment);
     
-    arraySort();
+arraySort();
 
-     // formatting date to mm/dd/yyyy
-     const month = ('0' + (newComment.timeStamp.getMonth() + 1)).slice(-2);
-     const day = ('0' + newComment.timeStamp.getDate()).slice(-2);
-     const year = newComment.timeStamp.getFullYear();
+ // formatting date to mm/dd/yyyy
+const month = ('0' + (newComment.timeStamp.getMonth() + 1)).slice(-2);
+const day = ('0' + newComment.timeStamp.getDate()).slice(-2);
+const year = newComment.timeStamp.getFullYear();
 
-     newComment.timeStamp = `${month}/${day}/${year}`;
+newComment.timeStamp = `${month}/${day}/${year}`;
 
-    form.reset();
+form.reset();
 
-    displayNew();
+displayNew();
 
 }) 
 

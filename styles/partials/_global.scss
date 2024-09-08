@@ -92,7 +92,6 @@
 
             @include tablet {
               flex:0;
-              // vcwevvvvvvvvvvvvvvvvvv
               padding: 0 4rem 0 4rem;
               margin: 0;
             }
@@ -156,11 +155,6 @@
               &:hover {
                 color: $white;
               }
-              // @include tablet {
-              // }
-
-              // @include desktop {
-              // }
 
               &--current {
                 color: #fff;
@@ -291,10 +285,6 @@
       @include tablet {
         @include text-style (2rem, 400, 3rem);
       }
-
-      // @include desktop {
-      //   // @include text-style (1.8rem, 400, 2.5rem);
-      // }
     }
   }
 

@@ -29,7 +29,6 @@
         left:1.5rem;
 
         @include tablet {
-            // top:15%;vvvvvvvvvvvvvvvvvvv
             left:4rem;
         }
 
@@ -47,7 +46,6 @@
 
         @include tablet {
             width:84%;
-            // eeeeervvvvvvvvvvvvvvvvvvvvvvvvvvv
             left:4rem;
         }
 
@@ -69,7 +67,6 @@
             width: 70%;
             border-radius:1rem;
             top:58%;
-            // vvvvvvvvvvvvvvvvvvvvvvvvv
             padding: 0rem 4rem;
         }
 
@@ -109,7 +106,6 @@
     }
 
     &__list {
-        // padding: 0 1.5rem;
         display:flex;
         flex-direction:column;
 
@@ -200,18 +196,5 @@
     
     &__label {
         width:34%;
-
-        // @include tablet {
-
-        // }
     }
 }
-
-// @include tablet {
-// .shows__list:hover {
-//     // &::selection {
-//         background-color: $alabaster;
-//         // color: $alabaster;
-//     // }
-// }
-// }
