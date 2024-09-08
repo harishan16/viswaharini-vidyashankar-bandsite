@@ -33,9 +33,9 @@ let showsList = [
 
 let showsEl = document.querySelector('.shows');
 
+// Create showa header row for tablet and desktop view
 let labelRow = document.createElement('div');
 labelRow.classList.add('shows__labelRow');
-labelRow.classList.add('shows__list');
 
 showsEl.appendChild(labelRow);
 
@@ -54,6 +54,7 @@ labelLocation.innerText = 'LOCATION';
 labelLocation.classList.add('shows__label');
 labelRow.appendChild(labelLocation);
 
+// Create shows item list
 
 function labelFunc (label) {
     let labelName = document.createElement('p');
@@ -106,8 +107,24 @@ for (let i = 0; i < showsList.length; i++) {
     let divider = document.createElement('hr');
     divider.classList.add('shows__divider');
     showsEl.appendChild(divider);
-
 }
+
+// Hover state and selected state for shows item
+
+    let allShows = document.querySelector('.shows');
+
+    allShows.addEventListener('click', (event) => {
+    let showItems = document.querySelectorAll('.shows__list');
+
+    showItems.forEach((item) => {
+        item.classList.remove('shows__list--selectedItem');
+    })
+
+    const clickedShow = event.target.closest('.shows__list');
+    if (clickedShow) {
+        clickedShow.classList.add('shows__list--selectedItem');
+    }
+})
 
 
 

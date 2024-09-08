@@ -150,7 +150,7 @@ p {
 @media screen and (min-width: 768px) {
   .header__logo-link {
     flex: 0;
-    padding: 0 4rem 0 6rem;
+    padding: 0 4rem 0 4rem;
     margin: 0;
   }
 }
@@ -207,15 +207,19 @@ p {
 .header__link {
   text-decoration: none;
   color: #afafaf;
-  font-weight: 600;
+  font-weight: 400;
+}
+.header__link:hover {
+  color: #ffffff;
 }
 .header__link--current {
   color: #fff;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .header__link--current {
     text-decoration: underline;
-    text-underline-offset: 4rem;
+    text-underline-offset: 4.1rem;
     text-decoration-thickness: 0.5rem;
   }
 }
@@ -572,7 +576,6 @@ p {
   }
 }
 .comments__user-image {
-  display: inline-block;
   width: 5.25rem;
   height: 5.25rem;
   margin-top: 2.7rem;
@@ -665,8 +668,7 @@ p {
   flex-direction: column;
   margin-top: 2rem;
 }
-.comments__imageHolder {
-  display: inline-block;
+.comments__imageHolder, .comments__userImage {
   width: 5.25rem;
   height: 5.25rem;
   border-radius: 50%;

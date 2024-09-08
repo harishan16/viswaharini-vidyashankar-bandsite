@@ -150,7 +150,7 @@ p {
 @media screen and (min-width: 768px) {
   .header__logo-link {
     flex: 0;
-    padding: 0 4rem 0 6rem;
+    padding: 0 4rem 0 4rem;
     margin: 0;
   }
 }
@@ -207,15 +207,19 @@ p {
 .header__link {
   text-decoration: none;
   color: #afafaf;
-  font-weight: 600;
+  font-weight: 400;
+}
+.header__link:hover {
+  color: #ffffff;
 }
 .header__link--current {
   color: #fff;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .header__link--current {
     text-decoration: underline;
-    text-underline-offset: 4rem;
+    text-underline-offset: 4.1rem;
     text-decoration-thickness: 0.5rem;
   }
 }
@@ -379,7 +383,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .hero__sub-title {
-    left: 6rem;
+    left: 4rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -396,7 +400,8 @@ p {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    left: 6rem;
+    width: 84%;
+    left: 4rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -418,7 +423,7 @@ p {
     width: 70%;
     border-radius: 1rem;
     top: 58%;
-    padding: 0rem 6rem;
+    padding: 0rem 4rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -436,7 +441,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .shows {
-    padding: 4rem 6rem;
+    padding: 4rem 4rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -448,10 +453,15 @@ p {
 .shows__title {
   padding: 4rem 0 2rem 0;
 }
+@media screen and (min-width: 768px) {
+  .shows__title {
+    padding: 4rem 0 2rem 2rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   .shows__title {
     position: absolute;
-    left: 14rem;
+    left: 12rem;
     top: 1.4rem;
   }
 }
@@ -459,11 +469,19 @@ p {
   display: flex;
   flex-direction: column;
 }
+.shows__list:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.shows__list--selectedItem {
+  background-color: #e1e1e1;
+}
 @media screen and (min-width: 768px) {
   .shows__list {
     flex-direction: row;
     justify-content: space-between;
     align-items: self-end;
+    padding: 1rem 2rem;
   }
 }
 .shows__list-label {
@@ -481,7 +499,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .shows__list-info {
-    width: 25%;
+    width: 32%;
   }
 }
 .shows__list-info--highlight {
@@ -532,6 +550,7 @@ p {
     display: flex;
     justify-content: start;
     margin: 4rem 0;
+    padding-left: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -540,5 +559,5 @@ p {
   }
 }
 .shows__label {
-  width: 32%;
+  width: 34%;
 }/*# sourceMappingURL=shows.css.map */

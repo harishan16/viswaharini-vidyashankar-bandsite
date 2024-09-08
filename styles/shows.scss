@@ -29,8 +29,8 @@
         left:1.5rem;
 
         @include tablet {
-            // top:15%;
-            left:6rem;
+            // top:15%;vvvvvvvvvvvvvvvvvvv
+            left:4rem;
         }
 
         @include desktop {
@@ -46,8 +46,9 @@
         width: 70%;
 
         @include tablet {
-            // top:15%;
-            left:6rem;
+            width:84%;
+            // eeeeervvvvvvvvvvvvvvvvvvvvvvvvvvv
+            left:4rem;
         }
 
         @include desktop {
@@ -68,7 +69,8 @@
             width: 70%;
             border-radius:1rem;
             top:58%;
-            padding: 0rem 6rem;
+            // vvvvvvvvvvvvvvvvvvvvvvvvv
+            padding: 0rem 4rem;
         }
 
         @include desktop {
@@ -85,7 +87,7 @@
     padding:1.5rem;
 
     @include tablet {
-        padding: 4rem 6rem;
+        padding: 4rem 4rem;
     }
 
     @include desktop {
@@ -95,9 +97,13 @@
     &__title {
         padding: 4rem 0 2rem 0;
 
+        @include tablet {
+        padding: 4rem 0 2rem 2rem;
+    }
+
         @include desktop {
             position: absolute;
-            left:14rem;
+            left:12rem;
             top:1.4rem;
         }
     }
@@ -107,10 +113,23 @@
         display:flex;
         flex-direction:column;
 
+        &:hover {
+        background-color: $alabaster;
+        cursor:pointer;
+        }
+
+        &--selectedItem {
+            background-color: $mercury;
+        }
+
+        
+
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
         align-items: self-end;
+        padding: 1rem 2rem;
+
     }
     }
 
@@ -128,7 +147,7 @@
         margin:0px 0 1.25rem 0;
 
         @include tablet {
-            width:25%
+            width:32%
         }
 
         &--highlight {
@@ -171,6 +190,7 @@
             display: flex;
             justify-content: start;
             margin:4rem 0;
+            padding-left:2rem;
         }
 
         @include desktop{
@@ -179,6 +199,19 @@
     }
     
     &__label {
-        width:32%;
+        width:34%;
+
+        // @include tablet {
+
+        // }
     }
 }
+
+// @include tablet {
+// .shows__list:hover {
+//     // &::selection {
+//         background-color: $alabaster;
+//         // color: $alabaster;
+//     // }
+// }
+// }

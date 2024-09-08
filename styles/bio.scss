@@ -211,7 +211,7 @@
     }
 
     &__user-image {
-        display: inline-block;
+        // display: inline-block;
         width:5.25rem;
         height:5.25rem;
         margin-top:2.7rem;
@@ -310,8 +310,8 @@
         margin-top: 2rem;
     }
 
-    &__imageHolder {
-        display: inline-block;
+    &__imageHolder, &__userImage{
+        // display: inline-block;
         width:5.25rem;
         height:5.25rem;
         border-radius: 50%;

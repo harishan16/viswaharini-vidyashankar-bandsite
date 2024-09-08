@@ -92,7 +92,8 @@
 
             @include tablet {
               flex:0;
-              padding: 0 4rem 0 6rem;
+              // vcwevvvvvvvvvvvvvvvvvv
+              padding: 0 4rem 0 4rem;
               margin: 0;
             }
           
@@ -150,7 +151,11 @@
           &__link {
               text-decoration: none;
               color: $silver;
-        font-weight:600;
+              font-weight:400;
+
+              &:hover {
+                color: $white;
+              }
               // @include tablet {
               // }
 
@@ -159,10 +164,11 @@
 
               &--current {
                 color: #fff;
+                font-weight:600;    
 
                 @include tablet {
                     text-decoration: underline;
-                    text-underline-offset: 4rem;
+                    text-underline-offset: 4.1rem;
                     text-decoration-thickness: 0.5rem;
                 }
               }
