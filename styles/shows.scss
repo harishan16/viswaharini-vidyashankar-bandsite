@@ -6,12 +6,16 @@
 /* Hero */
 .hero {
     background-image: url("../assets/images/hero-shows.jpg");
-    height: 28.625rem;
+    height: 36.625rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color:#fff;
     position: relative;
+
+    @include tablet {
+        height:60rem;
+    }
 
     &__overlay {
         background-color: $primary-black;
@@ -21,44 +25,85 @@
 
     &__sub-title {
         position: absolute;
-        top:15%;
+        top:10%;
         left:1.5rem;
+
+        @include tablet {
+            // top:15%;
+            left:6rem;
+        }
+
+        @include desktop {
+            top:30%;
+            left:14rem;
+        }
     }
 
     &__title {
         position:absolute;
-        top:25%;
+        top:20%;
         left:1.5rem;
+        width: 70%;
+
+        @include tablet {
+            // top:15%;
+            left:6rem;
+        }
+
+        @include desktop {
+            top: 40%;
+            left: 14rem;
+            width: 40%;
+        }
     }
 
     &__embedSong {
         height: 18rem;
         padding: 1.5rem;
         position: absolute;
-        top: 40%;
+        top: 45%;
         border-radius:2rem;
+
+        @include tablet {
+            width: 70%;
+            border-radius:1rem;
+            top:58%;
+            padding: 0rem 6rem;
+        }
+
+        @include desktop {
+            width: 30%;
+            height: 20%;
+            top: 40%;
+            left: 59%;
+            padding: 0;
+        }
     }
 }
 
 .shows {
-    padding:0;
+    padding:1.5rem;
+
+    @include tablet {
+        padding: 4rem 6rem;
+    }
 
     @include desktop {
-        padding: 3rem 12rem 3rem 42rem;
+        padding: 3rem 14rem 3rem 42rem;
         position: relative;
     }
     &__title {
-        padding: 4rem 0 2rem 1.5rem;
+        padding: 4rem 0 2rem 0;
 
         @include desktop {
             position: absolute;
-            left:7.5rem;
+            left:14rem;
             top:1.4rem;
         }
     }
 
     &__list {
-        padding: 0 1.5rem;
+        // padding: 0 1.5rem;
         display:flex;
         flex-direction:column;
 
@@ -71,8 +116,7 @@
 
     &__list-label {
         color:$silver;
-       
-        @include text-style ( 1.2rem, 700, 2.5rem);
+        font-weight:700;
         margin-bottom:0;
 
         @include tablet {
@@ -88,7 +132,7 @@
         }
 
         &--highlight {
-            @include text-style (1.6rem, 700, 2.5rem);
+            font-weight:700;
         }
     }
 
@@ -102,15 +146,18 @@
         text-decoration: none;
         border-radius: .375rem;
         cursor: pointer;
-        
-        @include text-style ( 1.6rem, 700, 2.5rem);
+        @include text-style (1.5rem, 700, 2.5rem);
+        font-weight: 700;
 
         @include tablet {
             width:30%;
+        @include text-style (2rem, 700, 2.5rem);
         }
 
         @include desktop {
             width:20%;
+        @include text-style (1.5rem, 700, 2.5rem);
+
         }
     }
 
@@ -119,8 +166,7 @@
 
         @include tablet {
             color:$silver;
-        
-        @include text-style ( 2rem, 600, 2.5rem);
+            font-weight:700;
             width: 75%;
             display: flex;
             justify-content: start;
@@ -132,7 +178,7 @@
         }
     }
     
-    &__labelRw {
+    &__label {
         width:32%;
     }
 }

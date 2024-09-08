@@ -41,17 +41,17 @@ showsEl.appendChild(labelRow);
 
 let labelDate = document.createElement('span');
 labelDate.innerText = 'DATE';
-labelDate.classList.add('shows__labelRw');
+labelDate.classList.add('shows__label');
 labelRow.appendChild(labelDate);
 
 let labelVenue = document.createElement('span');
 labelVenue.innerText = 'VENUE';
-labelVenue.classList.add('shows__labelRw');
+labelVenue.classList.add('shows__label');
 labelRow.appendChild(labelVenue);
 
 let labelLocation = document.createElement('span');
 labelLocation.innerText = 'LOCATION';
-labelLocation.classList.add('shows__labelRw');
+labelLocation.classList.add('shows__label');
 labelRow.appendChild(labelLocation);
 
 

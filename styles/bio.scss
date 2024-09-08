@@ -93,7 +93,7 @@
         }
 
         @include desktop {
-            @include text-style (2.3rem, 700, 3rem);
+            @include text-style (2.1rem, 700, 3rem);
             padding-top: 3.5rem;
             width:81%;
         }
@@ -124,15 +124,17 @@
     &__text {
         padding-top :1rem;
         margin:0;
+        // font-weight:600;
 
         @include tablet {
-            @include text-style (2rem, 400, 3rem);
+            // @include text-style (2rem, 400, 3rem);
+            // font-weight:600;
             padding-top:2.5rem;
             width:47%;
         } 
 
         @include desktop {
-            @include text-style (1.575rem, 400, 2.8rem);
+            // @include text-style (1.575rem, 400, 2.8rem);
         } 
     }
 
@@ -273,6 +275,7 @@
         border-radius: .375rem;
         cursor: pointer;
         @include text-style ( 1.6rem, 600, 2.5rem);
+        // font-weight:600;
 
         @include tablet {
             width: 35%;
