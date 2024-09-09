@@ -213,6 +213,18 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        @include tablet {
+            width: 6.5rem;
+            height:6.5rem;
+            margin-top:2rem;
+        }
+
+        @include desktop {
+            width: 5.25rem;
+            height:5.25rem;
+            margin-top:2.7rem;
+        }
     }
 
     &__form {
@@ -301,10 +313,20 @@
         margin-top: 2rem;
     }
 
-    &__imageHolder, &__userImage{
+    &__imageHolder{
         width:5.25rem;
         height:5.25rem;
         border-radius: 50%;
         background-color: $mercury;
+
+        @include tablet {
+            width:6.5rem;
+        height:6.5rem;
+        }
+
+        @include desktop {
+            width:5.25rem;
+        height:5.25rem;
+        }
     }
 }

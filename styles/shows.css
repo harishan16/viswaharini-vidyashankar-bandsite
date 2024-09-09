@@ -237,7 +237,7 @@ p {
   .footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 6rem;
+    padding: 4rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -325,7 +325,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .contact__group {
-    width: 33%;
+    width: 38%;
   }
 }
 @media screen and (min-width: 1280px) {

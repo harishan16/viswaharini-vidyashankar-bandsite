@@ -181,7 +181,7 @@
       @include tablet {
           flex-direction: row;
           justify-content: space-between;
-          padding:6rem;
+          padding:4rem;
       }
 
       @include desktop {
@@ -266,7 +266,7 @@
 
     &__group {
       @include tablet {
-        width:33%;
+        width:38%;
       }
 
       @include desktop {

@@ -237,7 +237,7 @@ p {
   .footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 6rem;
+    padding: 4rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -325,7 +325,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .contact__group {
-    width: 33%;
+    width: 38%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -587,6 +587,20 @@ p {
   background-size: cover;
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .comments__user-image {
+    width: 6.5rem;
+    height: 6.5rem;
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__user-image {
+    width: 5.25rem;
+    height: 5.25rem;
+    margin-top: 2.7rem;
+  }
+}
 .comments__form {
   display: flex;
   justify-content: space-between;
@@ -669,9 +683,21 @@ p {
   flex-direction: column;
   margin-top: 2rem;
 }
-.comments__imageHolder, .comments__userImage {
+.comments__imageHolder {
   width: 5.25rem;
   height: 5.25rem;
   border-radius: 50%;
   background-color: #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .comments__imageHolder {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__imageHolder {
+    width: 5.25rem;
+    height: 5.25rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
