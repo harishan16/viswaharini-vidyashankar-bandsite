@@ -14,45 +14,60 @@
       padding:0;
       font-size: 1.6em;
       color: $primary-black;
+      font-family: 'AvenirNextLTPro', Arial, sans-serif;
     }
 
     h1 {
-      @include text-style ('Avenir-Bold', 2.5rem, 700, 2rem); 
+      @include text-style (3.5rem, 700, 5rem); 
       margin: 0;
       padding:0;
       
       @include tablet {
-        @include text-style ('Avenir-Bold', 5.75rem, 700, 4.25rem);
+        @include text-style (7.75rem, 700, 9.25rem);
       }
       
       @include desktop {
-        @include text-style ('Avenir-Bold', 5.75rem, 700, 4.25rem); 
+        @include text-style (5.75rem, 700, 6.25rem); 
       }
     }
 
     h2 {
-      @include text-style ('Avenir-Bold', 2.5rem, 700, 2rem);
+      @include text-style (2.5rem, 700, 2rem);
       margin: 0;
       padding:0;
 
       @include tablet {
-        @include text-style ('Avenir-Bold', 4.25rem, 700, 3.75rem);
+        @include text-style (4.25rem, 700, 3.75rem);
       }
 
       @include desktop {
-        @include text-style ('Avenir-Bold', 4.25rem, 700, 3.75rem);
+        @include text-style (4.25rem, 700, 3.75rem);
+      }
+    }
+
+    h4 {
+      @include text-style (1.6rem, 700, 2.5rem);
+      margin:0;
+      padding:0;
+
+      @include tablet {
+        @include text-style (2.6rem, 700, 3.5rem);
+      }
+
+      @include desktop {
+        @include text-style (2.6rem, 700, 3.5rem);
       }
     }
 
     p {
-      @include text-style ('Avenir-Regular', 1.5rem, 400, 2rem);
+      @include text-style (1.5rem, 400, 2rem);
 
       @include tablet {
-        @include text-style ('Avenir-Regular', 2rem, 400, 3rem);
+        @include text-style (2rem, 400, 3rem);
       }
 
       @include desktop {
-        @include text-style ('Avenir-Regular', 1.8rem, 400, 2.5rem); 
+        @include text-style (1.5757rem, 400, 2.5rem); 
       }
     }
 
@@ -63,7 +78,7 @@
     flex-direction: column;
     justify-content: center;
 
-          @include tablet-desktop {
+          @include tablet {
             flex-direction: row;
             height: 10rem;
             justify-content: flex-start;
@@ -75,9 +90,9 @@
             padding-top: 1.5rem;
             margin:0 auto;
 
-            @include tablet-desktop {
+            @include tablet {
               flex:0;
-              padding: 0 4rem 0 6rem;
+              padding: 0 4rem 0 4rem;
               margin: 0;
             }
           
@@ -97,7 +112,7 @@
             margin: 0;
             padding: 1rem 0;
 
-            @include tablet-desktop {
+            @include tablet {
               flex:0;
               padding:0;
             }
@@ -110,7 +125,7 @@
             position: relative;
             border-bottom: 2px solid transparent;
 
-            @include tablet-desktop {
+            @include tablet {
               padding: 0 4rem;
               position: static;
             }
@@ -124,35 +139,31 @@
               height: 4px;
               background-color: #fff;
 
-              @include tablet-desktop {
+              @include tablet {
                 top:auto;
                 left: auto;
                 height:0;
               }
             }      
-         }
+          }
 
           &__link {
               text-decoration: none;
               color: $silver;
-              @include text-style ('Avenir-Regular', 1.5rem, 600, 1.875rem);
+              font-weight:400;
 
-              @include tablet {
-                @include text-style ('Avenir-Regular', 2rem, 600, 2.3rem);
-              }
-
-              @include desktop {
-                @include text-style ('Avenir-Regular', 1.5rem, 600, 1.875rem);
+              &:hover {
+                color: $white;
               }
 
               &--current {
                 color: #fff;
-                font-family: 'Avenir-Demi';
+                font-weight:600;    
 
-                @include tablet-desktop {
-                  text-decoration: underline;
-                  text-underline-offset: 4rem;
-                  text-decoration-thickness: 0.5rem;
+                @include tablet {
+                    text-decoration: underline;
+                    text-underline-offset: 4.1rem;
+                    text-decoration-thickness: 0.5rem;
                 }
               }
           }            
@@ -160,64 +171,64 @@
 
   /* Footer */
   .footer {
-    background-color: $primary-black;
-    color: $white;
-    font-family: 'Avenir-Bold';
-    padding: 1.5rem;
-    display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-
-    @include tablet-desktop {
-      flex-direction: row;
-      justify-content: space-between;
-      padding:6rem;
-    }
-
-    @include desktop {
-      padding: 4rem 13rem;
-    }
-
-    &__title {
-      padding-top:2rem;
-    }
-
-    &__social {
+      background-color: $primary-black;
+      color: $white;
+      padding: 1.5rem;
       display: flex;
-      justify-content: space-between;
-      width: 23%;
-      padding:1.5rem 0;
+      flex-direction:column;
+      flex-wrap: wrap;
 
-      @include tablet-desktop {
-        margin-left: -20rem;
-        margin-bottom:-0.5rem;
-        padding:1rem;
-        width:20%;
+      @include tablet {
+          flex-direction: row;
+          justify-content: space-between;
+          padding:4rem;
       }
 
       @include desktop {
-        margin-left:2rem;
-        padding: 1rem 1.5rem;
+        padding: 4rem 14rem;
       }
+
+      &__title {
+        padding-top:2rem;
+      }
+
+      &__social {
+        display: flex;
+        justify-content: space-between;
+        width: 23%;
+        padding:1.5rem 0;
+        margin:0;
+
+        @include tablet {
+            margin-left: -10rem;
+            margin-bottom:-0.5rem;
+            padding:1rem;
+            width:180px;
+        }
+
+        @include desktop {
+          margin-left:2rem;
+          padding: 1rem 1.5rem;
+        }
     }
 
-    &__logo {
-      width:12.5rem;
-      height:2.25rem;
+      &__logo {
+        width:12.5rem;
+        height:2.25rem;
 
-      @include desktop {
-      margin-left: 8rem;
+        @include desktop {
+        margin-left: 8rem;
+        }
       }
-    }
 
     &__logo-link {
       width: 20%;
       display: block;
       margin-top: 4rem;
 
-      @include tablet-desktop {
+      @include tablet {
         order:1;
-        margin:2.5rem 0 0 0;
+        margin:2.5rem 2rem 0 0;
         width:auto;
       }
 
@@ -227,7 +238,7 @@
     }
 
     &__copyright {
-      @include tablet-desktop {
+      @include tablet {
         order:3;
       }
     }
@@ -255,7 +266,7 @@
 
     &__group {
       @include tablet {
-        width:33%;
+        width:38%;
       }
 
       @include desktop {
@@ -269,16 +280,17 @@
 
     &__email {
       text-decoration: none;
-      @include text-style ('Avenir-Regular', 1.5rem, 400, 1.875rem);
       color:#fff;
 
       @include tablet {
-        @include text-style ('Avenir-Regular', 2rem, 400, 3rem);
+        @include text-style (2rem, 400, 3rem);
       }
-
-      @include desktop {
-        @include text-style ('Avenir-Regular', 1.8rem, 400, 2.5rem);
-      }
-
     }
   }
+
+  .shows__divider, .comments__divider {
+      border: 0;
+      height: 2px;
+      background: $mercury;
+      margin: 1.5rem 0; 
+}

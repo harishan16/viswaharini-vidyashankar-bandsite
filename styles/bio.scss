@@ -76,26 +76,26 @@
         padding-top: 1.5rem;
         height:30rem;
 
-        @include tablet-desktop {
+        @include tablet {
             padding-top: 4rem;
             height:50rem;
         }
     }
 
     &__quotes {
-    @include text-style ('Avenir-Demi', 1.6rem, 700, 2.5rem);
+    @include text-style (1.6rem, 700, 2.5rem);
         padding-top: 1rem;
         margin: 0;
 
         @include tablet {
-            @include text-style ('Avenir-Demi', 2.5rem, 700, 3.5rem);
-        padding-top: 3.5rem;
+            @include text-style (2.5rem, 700, 3.5rem);
+            padding-top: 3.5rem;
         }
 
         @include desktop {
-            @include text-style ('Avenir-Demi', 2.3rem, 700, 3rem);
-        padding-top: 3.5rem;
-        width:81%;
+            @include text-style (2.1rem, 700, 3rem);
+            padding-top: 3.5rem;
+            width:81%;
         }
 
         &--author {
@@ -104,11 +104,9 @@
     }
 
     &__sub-title {
-    @include text-style ('Avenir-Demi', 1.6rem, 700, 2.5rem);
         margin:0;
 
-        @include tablet-desktop {
-            @include text-style ('Avenir-Demi', 2.6rem, 700, 3.5rem);
+        @include tablet {
             padding-top:2rem;
         }
     }
@@ -117,7 +115,7 @@
         display: flex;
         flex-direction: column;
         
-        @include tablet-desktop {
+        @include tablet {
             flex-direction: row;
             justify-content: space-between;
         }
@@ -127,14 +125,9 @@
         padding-top :1rem;
         margin:0;
 
-        @include tablet-desktop {
-            @include text-style ('Avenir-Regular', 2rem, 400, 3rem);
+        @include tablet {
             padding-top:2.5rem;
             width:47%;
-        } 
-
-        @include desktop {
-            @include text-style ('Avenir-Regular', 1.575rem, 400, 2.8rem);
         } 
     }
 
@@ -142,8 +135,8 @@
 
 /* Photo gallery */
 .gallery {
-    padding:1.5rem;
     background-color: $alabaster;
+    padding:1.5rem;
 
     @include tablet {
         padding:3.125rem;
@@ -169,7 +162,7 @@
         display: flex;
         flex-direction: column;
 
-        @include tablet-desktop {
+        @include tablet {
          flex-direction: row;
          flex-wrap: wrap;
          justify-content: center;
@@ -181,9 +174,163 @@
         height:40%;
         padding-top:1.5rem;
 
-        @include tablet-desktop {
+        @include tablet {
             width:33.3%;
             padding:1.5rem;
+        }
+    }
+}
+
+.comments {
+    padding: 4rem 1.5rem;
+
+    @include tablet {
+        padding: 5rem 12rem;
+    }
+
+    @include desktop {
+        padding: 5rem 38rem;
+    }
+
+    &__title {
+        margin:0;
+
+        @include tablet {
+            margin-left:-8rem;
+        }
+        @include desktop {
+            margin-left:-25rem;
+        }
+    }
+
+    &__user-image {
+        width:5.25rem;
+        height:5.25rem;
+        margin-top:2.7rem;
+        border-radius: 50%;
+        background-color: $mercury;
+        background-image: url("../assets/images/Mohan-muruge.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include tablet {
+            width: 6.5rem;
+            height:6.5rem;
+            margin-top:2rem;
+        }
+
+        @include desktop {
+            width: 5.25rem;
+            height:5.25rem;
+            margin-top:2.7rem;
+        }
+    }
+
+    &__form {
+        display:flex;
+        justify-content: space-between;
+        margin:2.5rem 0;
+    }
+
+    &__form-label {
+        display:block;
+        @include text-style (1.375rem, 600, 2.8rem);
+        color: $silver;
+    }
+
+    &__form-input {
+        width:85%;
+    }
+
+    &__form-name {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+        border: 2px solid $mercury;
+        border-radius: 0.25rem;
+        background-color: $alabaster;
+        @include text-style (1.375rem, 400, 2.8rem);
+    }
+
+    &__form-comment {
+        @extend .comments__form-name;
+        height:10.5rem;
+        resize:none;
+        outline:$primary-black;
+        
+        &:active {
+            outline:$primary-black;
+        }
+
+        &__error {
+            outline:#D22d2d;
+        }
+    } 
+    
+    &__form-button {
+        width:100%;
+        height: 5rem;
+        background-color: $primary-black;
+        border:none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: .375rem;
+        cursor: pointer;
+        @include text-style ( 1.6rem, 600, 2.5rem);
+
+        &:hover {
+            background-color: $secondary-black;
+        }
+
+        @include tablet {
+            width: 35%;
+            float: right;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+
+    &__info-text {
+        width:85%;
+    }
+
+    &__user-name {
+        margin: 0;
+        display: inline-block;
+        font-weight:700;
+    }
+
+    &__time-stamp {
+        float:right;
+        color:$silver;
+    }
+
+    &__display{
+        display:flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    &__imageHolder{
+        width:5.25rem;
+        height:5.25rem;
+        border-radius: 50%;
+        background-color: $mercury;
+
+        @include tablet {
+            width:6.5rem;
+        height:6.5rem;
+        }
+
+        @include desktop {
+            width:5.25rem;
+        height:5.25rem;
         }
     }
 }

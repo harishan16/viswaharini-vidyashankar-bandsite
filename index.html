@@ -3,16 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./styles/bio.css" rel="stylesheet" />
+        <link href="./styles/bio.css" rel="stylesheet"/>
+        <script src="./scripts/index-page.js" defer></script>
         <title>Band Site</title>
     </head>
     <body>
         <header class="header">
-            <a href="#" class="header__logo-link"><img class="header__logo" src="./assets/logos/Logo-bandsite.svg" alt="website logo" /></a>
+            <a href="./index.html" class="header__logo-link"><img class="header__logo" src="./assets/logos/Logo-bandsite.svg" alt="wordmark logo stating bandsite" /></a>
+            <nav class="header__navigation"> 
             <ul class="header__list">
-                <li class="header__list-item header__list-item--current"><a href="#" class="header__link header__link--current">Biography</a></li>
-                <li class="header__list-item"><a href="" class="header__link">Shows</a></li>
+                <li class="header__list-item header__list-item--current"><a href="./index.html" class="header__link header__link--current">Biography</a></li>
+                <li class="header__list-item"><a href="./pages/shows.html" class="header__link">Shows</a></li>
             </ul>
+        </nav>
         </header>
         <main>
             <section class="hero">
@@ -21,7 +24,7 @@
             </section>
             <section class="band-info">
                 <h2 class="band-info__title">About the Musicians</h2>
-                <img class="band-info__image" src="./assets/images/band.jpg" alt="band image"/>
+                <img class="band-info__image" src="./assets/images/band.jpg" alt="wide shot image of the band performing on stage"/>
                 <p class="band-info__quotes">“We push each other to be the best. It’s not
                     uncommon for one of us to say ‘this needs
                     to be better, back to the drawing board’”</p>
@@ -35,25 +38,43 @@
             <section class="gallery">
                 <h2 class="gallery__title">Photo Gallery</h2>
                 <div class="gallery__container">
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-1.jpg" alt="gallery image 1" />
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-2.jpg" alt="gallery image 2" />
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-3.jpg" alt="gallery image 3" />
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-4.jpg" alt="gallery image 4" />
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-5.jpg" alt="gallery image 5" />
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-6.jpg" alt="gallery image 6" />
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-7.jpg" alt="gallery image 7" />
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-8.jpg" alt="gallery image 8" />
-                    <img class="gallery__image" src="./assets/images/Photo-gallery-9.jpg" alt="gallery image 9" />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-1.jpg" alt="Front shot of the stage live performance" />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-2.jpg" alt="A lady enjoying band music concert" />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-3.jpg" alt="Audience raising hands enjoying the band performance" />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-4.jpg" alt="A lady's photography vibing to the music " />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-5.jpg" alt="A vibrant stage shot with dynamic lighting effects and laser beams" />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-6.jpg" alt="People enjoying by throwing confetti and paper showers ove rthe stage" />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-7.jpg" alt="A well illuminated stage, spreading colorful vibrations" />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-8.jpg" alt="Clodeup image of musical instrument being played by an artist" />
+                    <img class="gallery__image" src="./assets/images/Photo-gallery-9.jpg" alt="Image of an artist singing live on stage" />
                 </div>
+            </section>
+            <section class="comments">
+                <h2 class="comments__title">Join the Conversation</h2>
+                <form class="comments__form">
+                    <div class="comments__user-image"></div>
+                    <div class="comments__form-input">
+                    <label for="name" class="comments__form-label">NAME</label>
+                    <input type="text" name="name" id="name" class="comments__form-name" placeholder="Enter your name">
+                    <label for="comment" class="comments__form-label">COMMENT</label>
+                    <textarea name="comment" id="comment" class="comments__form-comment" placeholder="Add a new comment"></textarea>
+                    <button name="submit" class="comments__form-button">COMMENT</button>
+                </div>
+                </form><hr class="comments__divider">
+                <section class="comments__display">
+
+                </section>
             </section>
         </main>
         <footer class="footer">
+            <!-- <section class="footer__title-block"> -->
             <h2 class="footer__title">Get in Touch</h2>
             <div class="footer__social">
-                <img class="footer__social-icon" src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram icon" />
-                <img class="footer__social-icon" src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook icon" />
-                <img class="footer__social-icon" src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter icon" />
+                <img class="footer__social-icon" src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram logo icon" />
+                <img class="footer__social-icon" src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook logo icon" />
+                <img class="footer__social-icon" src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter logo icon" />
             </div>
+            <!-- </section> -->
             <section class="contact">
                 <section class="contact__group">
                     <p class="contact__title">The Bees Knees Management</p>
@@ -71,7 +92,7 @@
                     <a href="mailto:bookings@archentertainment.com" class="contact__email">bookings@archentertainment.com</a>
                 </section>
             </section>
-            <a href="#" class="footer__logo-link"><img class="footer__logo footer__logo--alignment" src="./assets/logos/Logo-bandsite.svg" alt="website logo" /></a>
+            <a href="./index.html" class="footer__logo-link"><img class="footer__logo footer__logo--alignment" src="./assets/logos/Logo-bandsite.svg" alt="wordmark logo stating bandsite" /></a>
             <p class="footer__copyright">Copyright The Bees Knees &copy; 2023 All Rights Reserved</p>
         </footer>
     </body>
