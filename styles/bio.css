@@ -655,6 +655,9 @@ p {
   font-weight: 600;
   line-height: 2.5rem;
 }
+.comments__form-button:hover {
+  background-color: #000000;
+}
 @media screen and (min-width: 768px) {
   .comments__form-button {
     width: 35%;

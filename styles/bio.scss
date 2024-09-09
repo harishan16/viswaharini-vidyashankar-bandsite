@@ -280,6 +280,10 @@
         cursor: pointer;
         @include text-style ( 1.6rem, 600, 2.5rem);
 
+        &:hover {
+            background-color: $secondary-black;
+        }
+
         @include tablet {
             width: 35%;
             float: right;
