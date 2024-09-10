@@ -640,6 +640,13 @@ p {
 .comments__form-comment__error {
   outline: #D22d2d;
 }
+.comments__errorDisplay {
+  display: block;
+  color: red;
+}
+.comments__nameError, .comments__commentError {
+  display: none;
+}
 .comments__form-button {
   width: 100%;
   height: 5rem;

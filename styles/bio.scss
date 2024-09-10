@@ -267,6 +267,15 @@
             outline:#D22d2d;
         }
     } 
+
+    &__errorDisplay {
+        display: block;
+        color:red;
+    }
+
+    &__nameError, &__commentError {
+        display: none;
+    }
     
     &__form-button {
         width:100%;

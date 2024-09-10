@@ -26,6 +26,9 @@ commentsList.sort((a, b) => {
 }); 
 }
 
+let nameError = document.querySelector('.comments__nameError');
+let commentError = document.querySelector('.comments__commentError');
+
 
 let commentsForm = document.querySelector('.comments__form');
 console.log(commentsForm);
@@ -90,6 +93,9 @@ const form = event.target;
 const name = form.name.value;
 const comment = form.comment.value;
 
+
+if (name && comment) {
+
 // creating the new comment as object
     const newComment = {
         name: name,
@@ -111,7 +117,17 @@ newComment.timeStamp = `${month}/${day}/${year}`;
 form.reset();
 
 displayNew();
+nameError.classList.add('comments__nameError');
+commentError.classList.add('comments__commentError');
 
+
+} if(!name) {
+    nameError.classList.remove('comments__nameError');
+    nameError.classList.add('comments__errorDisplay');
+} if(!comment) {
+    commentError.classList.remove('comments__commentError');
+    commentError.classList.add('comments__errorDisplay');
+} 
 }) 
 
 displayNew();
