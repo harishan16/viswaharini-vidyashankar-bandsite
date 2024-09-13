@@ -1,50 +1,56 @@
 
-let commentsList = [
-    {
-        name: 'Victor Pinto',
-        timeStamp: '11/02/2023',
-        comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-    },
-    {
-        name: 'Christina Cabrera',
-        timeStamp: '10/28/2023',
-        comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-    },
-    {
-        name: 'Isaac Tadesse',
-        timeStamp: '10/20/2023',
-        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me   goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    }
-]
 
-function arraySort (){
-commentsList.sort((a, b) => {
-    const dateA = new Date(a.timeStamp);
-    const dateB = new Date(b.timeStamp);
+// class instantiation
+const bandSiteApi = new BandSiteApi('90a0e7b8-68d9-4acb-af2a-f8c719480a9d');
 
-    return dateB - dateA;
-}); 
-}
-
+let commentsList = [];
 let nameError = document.querySelector('.comments__nameError');
 let commentError = document.querySelector('.comments__commentError');
-
-
 let commentsForm = document.querySelector('.comments__form');
-console.log(commentsForm);
+let displayElement = document.querySelector('.comments__display');
 
-let displayElement = document.querySelector(".comments__display");
-console.log(displayElement);
-
-function displayNew () {
-    displayElement.innerText = "";
-
-commentsList.forEach((item) => {
-    displayComment(item);
-});
+// step 4: sorts the comments array newest to oldest
+function arraySort (data){
+    data.sort((a, b) => b.timestamp - a.timestamp);
+    return data;
 }
 
+function formErrorReset(form) {
+    nameError.classList.add('comments__nameError');
+    commentError.classList.add('comments__commentError');
+    form.name.classList.remove('comments__inputError');
+    form.comment.classList.remove('comments__inputError');
+}
+
+
+function getComments() {
+    displayElement.innerText = "";
+
+    // setTimeout
+    async function getCommentsData() {
+        // step 2: get the data from api class
+        const getData = await bandSiteApi.getComments();
+        // step 3: call sort function to sort
+        commentsList = arraySort(getData.data);
+        commentsList.forEach((item) => {
+            // step 5: for each the array response and call display function
+            displayComment(item);
+        });
+    }
+   
+ getCommentsData();
+}
+// step 1 : call get api to get comments
+getComments();
+
+// step 4: for each of the comment build the html components
 function displayComment(item) {
+// step 6: convert ms into regular time and then readable time
+const time = new Date(item.timestamp);
+const month = ('0' + (time.getMonth() + 1)).slice(-2);
+const day = ('0' + time.getDate()).slice(-2);
+const year = time.getFullYear();
+commentedTime  = `${month}/${day}/${year}`;
 
 let article = document.createElement("article");
 article.classList.add("comments__item");
@@ -72,7 +78,7 @@ infoText.appendChild(userName);
 
 const timeStamp = document.createElement('span');
 timeStamp.classList.add("comments__time-stamp");
-timeStamp.textContent = item.timeStamp;
+timeStamp.textContent = commentedTime;
 infoText.appendChild(timeStamp);
 
 const userComment = document.createElement('p');
@@ -86,48 +92,43 @@ displayElement.appendChild(divider);
 }
 
 commentsForm.addEventListener('submit', (event) => {
-   
-event.preventDefault();
 
+event.preventDefault();
 const form = event.target;
 const name = form.name.value;
 const comment = form.comment.value;
 
-
 if (name && comment) {
-
 // creating the new comment as object
     const newComment = {
         name: name,
-        timeStamp: new Date(),
         comment: comment,
     }
 
-commentsList.push(newComment);
-    
-arraySort();
+async function postCommentData() {
+       const postComment = await bandSiteApi.postComment(newComment);
+       getComments();
+}
 
- // formatting date to mm/dd/yyyy
-const month = ('0' + (newComment.timeStamp.getMonth() + 1)).slice(-2);
-const day = ('0' + newComment.timeStamp.getDate()).slice(-2);
-const year = newComment.timeStamp.getFullYear();
-
-newComment.timeStamp = `${month}/${day}/${year}`;
-
+postCommentData();
 form.reset();
-
-displayNew();
-nameError.classList.add('comments__nameError');
-commentError.classList.add('comments__commentError');
-
+formErrorReset(form);
 
 } if(!name) {
     nameError.classList.remove('comments__nameError');
     nameError.classList.add('comments__errorDisplay');
+    form.name.classList.add('comments__inputError');
 } if(!comment) {
     commentError.classList.remove('comments__commentError');
     commentError.classList.add('comments__errorDisplay');
+    form.comment.classList.add('comments__inputError');
 } 
 }) 
 
-displayNew();
+
+
+
+
+
+
+

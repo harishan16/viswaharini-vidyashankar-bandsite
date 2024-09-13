@@ -31,6 +31,17 @@ let showsList = [
     }
 ]
 
+// const bandSiteApi = new BandSiteApi('90a0e7b8-68d9-4acb-af2a-f8c719480a9d');
+
+// async function getShowDates() {
+//     const showDates = await bandSiteApi.getShows();
+//     console.log(showDates);
+// }
+
+// getShowDates();
+
+
+
 let showsEl = document.querySelector('.shows');
 
 // Create shows header row for tablet and desktop view

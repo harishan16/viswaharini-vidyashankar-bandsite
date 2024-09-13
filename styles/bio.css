@@ -647,6 +647,9 @@ p {
 .comments__nameError, .comments__commentError {
   display: none;
 }
+.comments__inputError {
+  border-color: red;
+}
 .comments__form-button {
   width: 100%;
   height: 5rem;

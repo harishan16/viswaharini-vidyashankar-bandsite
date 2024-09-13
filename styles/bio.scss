@@ -276,6 +276,10 @@
     &__nameError, &__commentError {
         display: none;
     }
+
+    &__inputError {
+        border-color: red;
+    }
     
     &__form-button {
         width:100%;
