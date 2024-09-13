@@ -1,45 +1,17 @@
-let showsList = [
-    {
-        date: 'Mon Sept 09 2024',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Tue Sep 17 2024',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Sat Oct 12 2024',
-        venue: 'View Lounge',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Sat Nov 16 2024',
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Fri Nov 29 2024',
-        venue: 'Moscow Center',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Wed Dec 18 2024',
-        venue: 'Press Club',
-        location: 'San Francisco, CA'
-    }
-]
+let showsList = [];
 
-// const bandSiteApi = new BandSiteApi('90a0e7b8-68d9-4acb-af2a-f8c719480a9d');
+const bandSiteApi = new BandSiteApi('90a0e7b8-68d9-4acb-af2a-f8c719480a9d');
 
-// async function getShowDates() {
-//     const showDates = await bandSiteApi.getShows();
-//     console.log(showDates);
-// }
+async function getShowDates() {
+    const showDates = await bandSiteApi.getShows();
+    const showsList = showDates.data;
+    showsList.forEach((show) => {
+        displayDates(show);
+    })
+    console.log(showsList);
+}
 
-// getShowDates();
-
+getShowDates();
 
 
 let showsEl = document.querySelector('.shows');
@@ -50,20 +22,25 @@ labelRow.classList.add('shows__labelRow');
 
 showsEl.appendChild(labelRow);
 
-let labelDate = document.createElement('span');
-labelDate.innerText = 'DATE';
-labelDate.classList.add('shows__label');
-labelRow.appendChild(labelDate);
 
-let labelVenue = document.createElement('span');
-labelVenue.innerText = 'VENUE';
-labelVenue.classList.add('shows__label');
-labelRow.appendChild(labelVenue);
+function headerLabel () {
+    let labelDate = document.createElement('span');
+    labelDate.innerText = 'DATE';
+    labelDate.classList.add('shows__label');
+    labelRow.appendChild(labelDate);
 
-let labelLocation = document.createElement('span');
-labelLocation.innerText = 'LOCATION';
-labelLocation.classList.add('shows__label');
-labelRow.appendChild(labelLocation);
+    let labelVenue = document.createElement('span');
+    labelVenue.innerText = 'VENUE';
+    labelVenue.classList.add('shows__label');
+    labelRow.appendChild(labelVenue);
+
+    let labelLocation = document.createElement('span');
+    labelLocation.innerText = 'LOCATION';
+    labelLocation.classList.add('shows__label');
+    labelRow.appendChild(labelLocation);
+}
+
+headerLabel();
 
 // Create shows item list
 
@@ -74,15 +51,33 @@ function labelFunc (label) {
     return labelName;
 } 
 
-for (let i = 0; i < showsList.length; i++) {
 
+function displayDates (show) {
     let articleEl = document.createElement('article');
     articleEl.classList.add('shows__list');
 
-    let show = showsList[i];   
+    // let show = showsList[i];  
+    // console.log(show); 
     let labelName = labelFunc('DATE');
     articleEl.appendChild(labelName);
 
+//     // console.log(show.date);
+//     const newDate = new Date(show.date);
+//     const dayName = newDate.toLocaleString({weekday: 'short'});
+//     const month = newDate.toLocaleString({month: 'short'});
+// const day = ('0' + newDate.getDate()).slice(-2);
+// // console.log(day);
+// const year = newDate.getFullYear();
+
+// const showTime = `${dayName} ${month} ${day} ${year}`;
+// console.log(showTime);
+
+
+//     const dayOfWeek = date.toLocaleString('en-US', { weekday: 'short' }); // Mon
+// const month = date.toLocaleString('en-US', { month: 'short' }); // Sep
+// const day = pad(date.getDate()); // 09
+// const year = date.getFullYear(); // 2024
+//     console.log(day);
 
     let date = document.createElement('p');
     date.innerText = show.date;
@@ -94,7 +89,7 @@ for (let i = 0; i < showsList.length; i++) {
     articleEl.appendChild(venueName);
 
     let venue = document.createElement('p');
-    venue.innerText = show.venue;
+    venue.innerText = show.place;
     venue.classList.add('shows__list-info');
     articleEl.appendChild(venue);
 

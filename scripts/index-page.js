@@ -22,6 +22,13 @@ function formErrorReset(form) {
     form.comment.classList.remove('comments__inputError');
 }
 
+function dateConversion (item) {
+    const time = new Date(item.timestamp);
+const month = ('0' + (time.getMonth() + 1)).slice(-2);
+const day = ('0' + time.getDate()).slice(-2);
+const year = time.getFullYear();
+commentedTime  = `${month}/${day}/${year}`;
+}
 
 function getComments() {
     displayElement.innerText = "";
@@ -46,11 +53,7 @@ getComments();
 // step 4: for each of the comment build the html components
 function displayComment(item) {
 // step 6: convert ms into regular time and then readable time
-const time = new Date(item.timestamp);
-const month = ('0' + (time.getMonth() + 1)).slice(-2);
-const day = ('0' + time.getDate()).slice(-2);
-const year = time.getFullYear();
-commentedTime  = `${month}/${day}/${year}`;
+dateConversion(item);
 
 let article = document.createElement("article");
 article.classList.add("comments__item");
