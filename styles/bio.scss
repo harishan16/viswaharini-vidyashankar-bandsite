@@ -264,13 +264,13 @@
         }
 
         &__error {
-            outline:#D22d2d;
+            outline:$error-state;
         }
     } 
 
     &__errorDisplay {
         display: block;
-        color:red;
+        color:$error-state;
     }
 
     &__nameError, &__commentError {
@@ -278,7 +278,7 @@
     }
 
     &__inputError {
-        border-color: red;
+        border-color:$error-state;
     }
     
     &__form-button {
@@ -286,7 +286,7 @@
         height: 5rem;
         background-color: $primary-black;
         border:none;
-        color: white;
+        color: $white;
         text-align: center;
         text-decoration: none;
         border-radius: .375rem;
