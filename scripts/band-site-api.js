@@ -34,6 +34,27 @@ class BandSiteApi {
         }
     }
 
+    async likeComment(commentId) {
+        try {
+            let url = `${this.baseUrl}comments/${commentId}/like?api_key=${this.apiKey}`;
+            const response = await axios.put(url);
+            return response;
+        } catch(error) {
+            console.log(error);
+        }
+    }
+
+    async deleteComment(commentId) {
+        try {
+            let url = `${this.baseUrl}comments/${commentId}?api_key=${this.apiKey}`;
+            const response = await axios.delete(url);
+            console.log(response);
+            return response;
+        } catch(error) {
+            console.log(error);
+        }
+    }
+
 }
 
 

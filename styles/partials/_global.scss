@@ -23,11 +23,11 @@
       padding:0;
       
       @include tablet {
-        @include text-style (7.75rem, 700, 9.25rem);
+        @include text-style (6rem, 700, 9.25rem);
       }
       
       @include desktop {
-        @include text-style (5.75rem, 700, 6.25rem); 
+        @include text-style (5rem, 700, 6.25rem); 
       }
     }
 
@@ -55,7 +55,7 @@
       }
 
       @include desktop {
-        @include text-style (2.6rem, 700, 3.5rem);
+        @include text-style (2.8rem, 700, 3.5rem);
       }
     }
 
