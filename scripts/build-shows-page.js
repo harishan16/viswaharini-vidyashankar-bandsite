@@ -8,20 +8,16 @@ async function getShowDates() {
     showsList.forEach((show) => {
         displayDates(show);
     })
-    console.log(showsList);
 }
 
 getShowDates();
 
-
 let showsEl = document.querySelector('.shows');
 
-// Create shows header row for tablet and desktop view
 let labelRow = document.createElement('div');
 labelRow.classList.add('shows__labelRow');
 
 showsEl.appendChild(labelRow);
-
 
 function headerLabel () {
     let labelDate = document.createElement('span');
@@ -43,7 +39,6 @@ function headerLabel () {
 headerLabel();
 
 // Create shows item list
-
 function labelFunc (label) {
     let labelName = document.createElement('p');
     labelName.innerText = label;
@@ -51,36 +46,22 @@ function labelFunc (label) {
     return labelName;
 } 
 
-
 function displayDates (show) {
     let articleEl = document.createElement('article');
     articleEl.classList.add('shows__list');
 
-    // let show = showsList[i];  
-    // console.log(show); 
     let labelName = labelFunc('DATE');
     articleEl.appendChild(labelName);
 
-//     // console.log(show.date);
-//     const newDate = new Date(show.date);
-//     const dayName = newDate.toLocaleString({weekday: 'short'});
-//     const month = newDate.toLocaleString({month: 'short'});
-// const day = ('0' + newDate.getDate()).slice(-2);
-// // console.log(day);
-// const year = newDate.getFullYear();
-
-// const showTime = `${dayName} ${month} ${day} ${year}`;
-// console.log(showTime);
-
-
-//     const dayOfWeek = date.toLocaleString('en-US', { weekday: 'short' }); // Mon
-// const month = date.toLocaleString('en-US', { month: 'short' }); // Sep
-// const day = pad(date.getDate()); // 09
-// const year = date.getFullYear(); // 2024
-//     console.log(day);
+    const newDate = new Date(show.date);
+    const dayName = newDate.toLocaleDateString('en-US', {weekday: 'short'});
+    const month = newDate.toLocaleDateString('en-US', {month: 'short'});
+    const day = ('0' + newDate.getDate()).slice(-2);
+    const year = newDate.getFullYear();
+    const showTime = `${dayName} ${month} ${day} ${year}`;
 
     let date = document.createElement('p');
-    date.innerText = show.date;
+    date.innerText = showTime;
     date.classList.add('shows__list-info');
     date.classList.add('shows__list-info--highlight');
     articleEl.appendChild(date);
@@ -114,10 +95,9 @@ function displayDates (show) {
 }
 
 // Hover state and selected state for shows item
+let allShows = document.querySelector('.shows');
 
-    let allShows = document.querySelector('.shows');
-
-    allShows.addEventListener('click', (event) => {
+allShows.addEventListener('click', (event) => {
     let showItems = document.querySelectorAll('.shows__list');
 
     showItems.forEach((item) => {
