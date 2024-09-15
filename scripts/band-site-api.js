@@ -48,7 +48,6 @@ class BandSiteApi {
         try {
             let url = `${this.baseUrl}comments/${commentId}?api_key=${this.apiKey}`;
             const response = await axios.delete(url);
-            console.log(response);
             return response;
         } catch(error) {
             console.log(error);

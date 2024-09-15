@@ -4,7 +4,6 @@ let commentsList = [];
 let nameError = document.querySelector('.comments__nameError');
 let commentError = document.querySelector('.comments__commentError');
 let commentsForm = document.querySelector('.comments__form');
-console.log(commentsForm);
 
 let displayElement = document.querySelector('.comments__display');
 
@@ -23,10 +22,10 @@ function formErrorReset(form) {
 
 function dateConversion (item) {
     const time = new Date(item.timestamp);
-const month = ('0' + (time.getMonth() + 1)).slice(-2);
-const day = ('0' + time.getDate()).slice(-2);
-const year = time.getFullYear();
-commentedTime  = `${month}/${day}/${year}`;
+    const month = ('0' + (time.getMonth() + 1)).slice(-2);
+    const day = ('0' + time.getDate()).slice(-2);
+    const year = time.getFullYear();
+    commentedTime  = `${month}/${day}/${year}`;
 }
 
 function getComments() {
@@ -45,7 +44,6 @@ getComments();
 
 function displayComment(item) {
     dateConversion(item);
-    console.log(item);
 
     let article = document.createElement("article");
     article.classList.add("comments__item");
@@ -108,9 +106,8 @@ function displayComment(item) {
         event.preventDefault();
         async function saveLikeData() {
             const likeUpdated = await bandSiteApi.likeComment(item.id);
-            console.log(likeUpdated);
-       getComments();
-     }
+            getComments();
+        }
      saveLikeData();
     })
 
@@ -118,9 +115,8 @@ function displayComment(item) {
         event.preventDefault();
         async function deleteCommentData() {
             const deleteUpdated = await bandSiteApi.deleteComment(item.id);
-            console.log(deleteUpdated);
-       getComments();
-     }
+            getComments();
+        }
      deleteCommentData();
     })
   
@@ -132,16 +128,16 @@ commentsForm.addEventListener('submit', (event) => {
     const name = form.name.value;
     const comment = form.comment.value;
 
-if (name && comment) {
-    const newComment = {
-        name: name,
-        comment: comment,
-    }
+    if (name && comment) {
+        const newComment = {
+            name: name,
+            comment: comment,
+        }
 
     async function postCommentData() {
        const postComment = await bandSiteApi.postComment(newComment);
        getComments();
-}
+    }
 
     postCommentData();
     form.reset();
@@ -156,20 +152,4 @@ if (name && comment) {
     commentError.classList.add('comments__errorDisplay');
     form.comment.classList.add('comments__inputError');
 } 
-}) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})
