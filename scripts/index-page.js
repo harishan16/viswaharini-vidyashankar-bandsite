@@ -108,7 +108,7 @@ function displayComment(item) {
             const likeUpdated = await bandSiteApi.likeComment(item.id);
             getComments();
         }
-     saveLikeData();
+        saveLikeData();
     })
 
     deleteButton.addEventListener('click', (event) => {
@@ -117,7 +117,7 @@ function displayComment(item) {
             const deleteUpdated = await bandSiteApi.deleteComment(item.id);
             getComments();
         }
-     deleteCommentData();
+        deleteCommentData();
     })
   
 }

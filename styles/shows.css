@@ -506,7 +506,7 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: self-end;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
   }
 }
 .shows__list-label {
@@ -579,11 +579,6 @@ p {
     justify-content: start;
     margin: 4rem 0;
     padding-left: 2rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .shows__labelRow {
-    width: 84%;
   }
 }
 .shows__label {

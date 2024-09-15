@@ -124,7 +124,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: self-end;
-        padding: 1rem 2rem;
+        padding: 1rem 2.5rem;
 
     }
     }
@@ -191,10 +191,6 @@
             justify-content: start;
             margin:4rem 0;
             padding-left:2rem;
-        }
-
-        @include desktop{
-            width: 84%;
         }
     }
     
