@@ -10,7 +10,7 @@ class BandSiteApi {
             const response = await axios.post(url, data);
             return response;
         } catch(error) {
-            console.error(error);
+            console.error('Posting new comment request failed:' + error);
         }
     }    
 
@@ -20,7 +20,7 @@ class BandSiteApi {
             const response = await axios.get(url);
             return response;
         } catch(error) {
-            console.error(error);
+            console.error('Getting comments request failed:' + error);
         }
     }
 
@@ -30,7 +30,7 @@ class BandSiteApi {
             const response = await axios.get(url);
             return response;
         } catch(error) {
-            console.log(error);
+            console.log('Getting show details request failed:' + error);
         }
     }
 
@@ -40,7 +40,7 @@ class BandSiteApi {
             const response = await axios.put(url);
             return response;
         } catch(error) {
-            console.log(error);
+            console.log('Liking comment request failed:' + error);
         }
     }
 
@@ -50,7 +50,7 @@ class BandSiteApi {
             const response = await axios.delete(url);
             return response;
         } catch(error) {
-            console.log(error);
+            console.log('Deleting comment request failed:' + error);
         }
     }
 
